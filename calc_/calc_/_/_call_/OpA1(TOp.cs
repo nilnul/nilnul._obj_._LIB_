@@ -1,0 +1,34 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+
+namespace nilnul.obj._call_
+{
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <typeparam name="TOp">the operator</typeparam>
+	public abstract  class OpA1<TOp> : OpI1<TOp>
+		where TOp:nilnul.obj._op_.BlankI
+
+	{
+		private TOp _op;
+		public TOp op
+		{
+			get
+			{
+				return _op;
+			}
+			set
+			{
+				_op=value;
+			}
+		}
+		public OpA1(TOp op)
+		{
+			this.op = op;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.obj.set.eq_
+{
+
+	[Obsolete(nameof(nilnul.obj.set._eq_._OfSeqX))]
+	public static  class  _EqOfEnumerable
+	{
+
+		static public bool Eq<T>(IEnumerable<T> x, IEnumerable<T> y, IEqualityComparer<T> elementEq)
+		{
+			return set.re_._Subset.Subset(x, y, elementEq) && set.re_._Subset.Subset(y, x, elementEq);
+		}
+
+		static public bool Eq<T,TEq>(IEnumerable<T> x, IEnumerable<T> y)
+			where TEq:IEqualityComparer<T>,new()
+		{
+			return Eq<T>(x,y, SingletonByDefault<TEq>.Instance);
+		}
+
+	}
+	[Obsolete(nameof(nilnul.obj.set._eq_._OfSeqX))]
+	public class EqOfEnumerable<T> : IEqualityComparer<
+		IEnumerable<T>
+	>
+	{
+		private IEqualityComparer<T> _elementEq;
+
+		public IEqualityComparer<T> elementEq
+		{
+			get { return _elementEq; }
+			set { _elementEq = value; }
+		}
+
+		private nilnul.obj.set.re_.SubsetBetweenEnumerables<T> _subset;
+
+		public nilnul.obj.set.re_.SubsetBetweenEnumerables<T> subset
+		{
+			get { return _subset; }
+		//	set { _subset = value; }
+		}
+
+
+		public EqOfEnumerable(
+			IEqualityComparer<T> elementEq
+		)
+		{
+			_elementEq = elementEq;
+			_subset = new re_.SubsetBetweenEnumerables<T>(_elementEq);
+		}
+		public bool Equals(IEnumerable<T> x, IEnumerable<T> y)
+		{
+			return _subset.re(x, y) && _subset.re(y, x);
+
+			//throw new NotImplementedException();
+		}
+
+		public int GetHashCode(IEnumerable<T> obj)
+		{
+			return 0;
+		//	throw new NotImplementedException();
+		}
+	}
+}

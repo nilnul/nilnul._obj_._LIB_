@@ -1,0 +1,16 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace nilnul.obj.opt_
+{
+	public class Non<T>:OptI<T>,NonI
+	{
+		public override string ToString()
+		{
+			return "";
+		}
+	}
+}
