@@ -9,22 +9,16 @@ namespace nilnul.obj._id._nom.term
 	/// <summary>
 	/// prepend "_"
 	/// eg:
-	///		
+	///		_abc
 	/// </summary>
 	/// <remarks>
 	///
 	/// </remarks>
-	internal class IPrior
+	public interface IPrior
+		:
+		extered_.IFore
+		,
+		IExteriored
 	{
-	}
-
-	/// <summary>
-	/// apply <see cref="IPrior"/> 0, 1, or more times.
-	/// eg:
-	/// ___Abc
-	/// </summary>
-	class IPriorsed
-	{
-
 	}
 }

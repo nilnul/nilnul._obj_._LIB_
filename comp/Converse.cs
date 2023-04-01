@@ -8,8 +8,13 @@ namespace nilnul.obj.comp
 {
 	/// <summary>
 	/// comparer defined a relation that is total, linear order.
-	/// Converse of such relation means 
+	/// Converse of such relation means a relation is total, linear order in the opposite direction.
+	/// eg:
+	///		the converse of ge is le.
 	/// </summary>
+	/// <remarks>
+	/// converse is same as complement when it comes to comparer, which is linear ord;
+	/// </remarks>
 	public class Converse<T> :
 		nilnul.obj.Box1<IComparer<T>>
 		,
@@ -24,7 +29,7 @@ namespace nilnul.obj.comp
 		}
 
 		/// <summary>
-		/// converse is same as negative as long as the comparer is defined to be a linear order
+		/// converse is same as complement|negative as long as the comparer is defined to be a linear order
 		/// </summary>
 		/// <param name="x"></param>
 		/// <param name="y"></param>

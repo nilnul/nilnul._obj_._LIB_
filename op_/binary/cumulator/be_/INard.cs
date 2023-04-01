@@ -14,10 +14,12 @@ namespace nilnul.obj.op_.binary.cumulator.be_
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <remarks>
+	/// This is not much useful as <see cref="UnardableI{T}"/>
 	/// alias:
 	///		neutral
 	///		nul
 	/// </remarks>
+	/// 
 	public interface INardable
 	{
 	}

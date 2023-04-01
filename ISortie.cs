@@ -13,7 +13,9 @@ namespace nilnul.obj
 	/// <typeparam name="T"></typeparam>
 	/// <seealso cref="nameof(nilnul.obj.str.be_.distinct.vow.Ed>)"/>
 	///
-	public interface ISortie : _sortie_.BlankI, IStr
+	public interface ISortie : _sortie_.BlankI
+		,
+		IStr
 	{
 	}
 

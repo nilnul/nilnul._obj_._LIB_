@@ -9,6 +9,10 @@ using System.Runtime.InteropServices;
 
  */
 
+/// expose obj.  interfaces in a uniform way; eg:
+///		<see cref="nilnul.obj.ISplice"/> and <see cref="nilnul.obj.ISplice"/>
+
+
 
 
 // General Information about an assembly is controlled through the following 

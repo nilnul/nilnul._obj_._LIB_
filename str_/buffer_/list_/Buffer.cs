@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace nilnul.obj
 {
 	/// <summary>
-	/// size not change. for changed size, use List
+	/// size not change. it's cyclic, no xpn is thrown ; to throw xpn, use blocking buffer;
+	/// for changed size, use List;
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <remarks>

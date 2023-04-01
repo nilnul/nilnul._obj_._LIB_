@@ -2,6 +2,9 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
+    <Deterministic>false</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{04F7924B-1268-4514-B3B7-EE563C7A8E15}</ProjectGuid>
@@ -9,7 +12,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>nilnul.obj</RootNamespace>
     <AssemblyName>nilnul._obj_._LIB_</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SccProjectName>
     </SccProjectName>
@@ -132,15 +135,37 @@
     <Optimize>true</Optimize>
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <LangVersion>7.3</LangVersion>
     <ErrorReport>prompt</ErrorReport>
-    <LangVersion>default</LangVersion>
-    <!--<LangVersion>latest</LangVersion>-->
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
+    <!--<LangVersion>preview</LangVersion>-->
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Sym2nuget|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Sym2nuget\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>latest</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev2nuget|AnyCPU'">
+    <OutputPath>bin\Dev2nuget\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <!--<LangVersion>7.3</LangVersion>-->
+    <!--<LangVersion>default</LangVersion>-->
+    <LangVersion>latest</LangVersion>
     <!--<LangVersion>preview</LangVersion>-->
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed">
-      <HintPath>..\..\(packages)\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <HintPath>packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -153,19 +178,82 @@
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
-    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230">
-      <HintPath>..\..\(packages)\_nilnul_._LIB_.1.1.220725.3035720\lib\net48\_nilnul_._LIB_.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="_nilnul_._LIB_, Version=1.1.0.1, Culture=neutral, PublicKeyToken=085f320e4a727230, processorArchitecture=MSIL">
+      <HintPath>..\_TEST_\packages\_nilnul_._LIB_.1.1.230219.74250-sym\lib\net481\_nilnul_._LIB_.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="%28accumulate\%28retiring\AccumulateI1 - Copy.cs" />
     <Compile Include="%28accumulate\AccumulateI1 - Copy.cs" />
+    <Compile Include="%28eq%29\eq_\AsObj.cs" />
+    <Compile Include="border\ICo.cs" />
+    <Compile Include="BoundI.cs" />
+    <Compile Include="bound_\IClopen.cs" />
+    <Compile Include="bound_\IOpen.cs" />
+    <Compile Include="bound_\IOpenClose.cs" />
+    <Compile Include="%28box_\ICapsule.cs" />
+    <Compile Include="duo_\ICo.cs" />
+    <Compile Include="IBorder.cs" />
+    <Compile Include="IBound.cs" />
+    <Compile Include="IDuo1.cs" />
+    <Compile Include="ISeq.cs" />
+    <Compile Include="ISeq1.cs" />
+    <Compile Include="ISplit.cs" />
+    <Compile Include="IStream.cs" />
+    <Compile Include="IStream1.cs" />
+    <Compile Include="nilnul0\_obj\typ\identy\of_\unary_\IPromote.cs" />
+    <Compile Include="nilnul0\_obj\typ\herit_\ISynonym.cs" />
+    <Compile Include="nilnul0\_obj\typ\IHerit.cs" />
+    <Compile Include="nilnul0\_obj\typ\ISup.cs" />
+    <Compile Include="nilnul0\_obj\typ_\_UnisonX.cs" />
+    <Compile Include="range_\dwelt_\INondecrease.cs" />
+    <Compile Include="range_\IClosed.cs" />
+    <Compile Include="range_\IDecrease.cs" />
+    <Compile Include="range_\IDwelt.cs" />
+    <Compile Include="range_\IEmpty.cs" />
+    <Compile Include="range_\IIncrease.cs" />
+    <Compile Include="range_\INonincrease.cs" />
+    <Compile Include="range_\IOpen.cs" />
+    <Compile Include="splice_\OfArrI.cs" />
+    <Compile Include="splice_\ofArr_\OfSeqA.cs" />
+    <Compile Include="splice_\ofSeq_\OfArrA.cs" />
+    <Compile Include="split_\ToArrI.cs" />
+    <Compile Include="split_\toSeq_\ToArrA.cs" />
+    <Compile Include="stream\BufferedI.cs" />
+    <Compile Include="stream\ISubsume.cs" />
+    <Compile Include="stream\Cumulated_blankI.cs" />
+    <Compile Include="stream\ICumulus.cs" />
+    <Compile Include="stream\IStock.cs" />
+    <Compile Include="stream\_subsume_\LastSubsumedI.cs" />
+    <Compile Include="stream_\ISlider.cs" />
+    <Compile Include="stream_\SliderI.cs" />
+    <Compile Include="stream_\slider\ICumulus.cs" />
+    <Compile Include="stream_\slider\ISubsume.cs" />
+    <Compile Include="stream_\slider\SubsumeI.cs" />
+    <Compile Include="stream_\slider\subsume_\Subsume_opDefault.cs" />
+    <Compile Include="stream_\slider\subsume_\Subsume_opDefault_sliderGeneral.cs" />
+    <Compile Include="stream_\slider\subsume_\opDefault_\Subsume_opDefault_sliderNew.cs" />
+    <Compile Include="stream_\slider\Subsume_sliderGeneral.cs" />
+    <Compile Include="stream_\slider\_subsume_\LastSubsumedI.cs" />
+    <Compile Include="stream_\slider_\SliderI_blank.cs" />
+    <Compile Include="stream_\_slider\_skim_\CurrentI.cs" />
+    <Compile Include="stream_\_slider\_skim_\MoveNextI.cs" />
+    <Compile Include="stream_\_slider_\SkimI.cs" />
+    <Compile Include="to_\IStr.cs" />
+    <Compile Include="split_\ToSeqI.cs" />
+    <Compile Include="splice_\OfSeqI.cs" />
+    <Compile Include="ISplice.cs" />
     <Compile Include="%28be\Be%28D - Copy.cs" />
+    <Compile Include="%28be\BeI1.cs" />
+    <Compile Include="%28be\be\Anto_ofIn.cs" />
+    <Compile Include="%28be\be\anto_\Anto.cs" />
+    <Compile Include="%28be\be\anto_\BeDefaulted_ofIn.cs" />
+    <Compile Include="%28be\be_\ofIn\Anto.cs" />
+    <Compile Include="%28be\be_\ofIn\anto_\BeDefaulted.cs" />
     <Compile Include="%28be\be\Vow_ofIn.cs" />
     <Compile Include="%28be\Be_ofInI.cs" />
     <Compile Include="%28be\BeOfRefI.cs" />
-    <Compile Include="%28be\be\anto_\Anto.cs" />
+    <Compile Include="%28be\be\anto_\BeDefaulted.cs" />
     <Compile Include="%28be\be\co\alesce_\Or.cs" />
     <Compile Include="%28be\be\co\alesce_\And.cs" />
     <Compile Include="%28be\be\co\alesce_\or_\Defaultable.cs" />
@@ -188,18 +276,49 @@
     <Compile Include="%28be\be\_vow\xpn_\NegativeException - Copy.cs" />
     <Compile Include="%28be\be\_vow\xpn_\NewFolder1\Deny - Copy.cs" />
     <Compile Include="%28border\BorderI.cs" />
-    <Compile Include="%28border\border\co\BeA.cs" />
-    <Compile Include="%28border\border\co\BeI.cs" />
-    <Compile Include="%28border\border\co\be\Vow.cs" />
-    <Compile Include="%28border\border\co\be\vow_\BeDefault.cs" />
+    <Compile Include="border\comp\re_\Re.cs" />
+    <Compile Include="border\comp\_ReX.cs" />
+    <Compile Include="border\comp_\lower\re_\ObjCompDefault.cs" />
+    <Compile Include="border\comp_\upper\Re.cs" />
+    <Compile Include="border\comp_\upper\re_\ObjCompDefault.cs" />
+    <Compile Include="border\co\BeA.cs" />
+    <Compile Include="border\co\BeI.cs" />
+    <Compile Include="border\co\be\Vow.cs" />
+    <Compile Include="border\co\be\vow_\BeDefault.cs" />
+    <Compile Include="border\co\phrase_\LowerUpper.cs" />
+    <Compile Include="border\co_\LowerUpperI.cs" />
+    <Compile Include="border\co_\LowerUpperA.cs" />
+    <Compile Include="border\Phrase.cs" />
+    <Compile Include="border_\LowerI.cs" />
+    <Compile Include="border_\lower\Phrase.cs" />
+    <Compile Include="border_\UpperI.cs" />
+    <Compile Include="border_\upper\comp_\ObjCompDefault.cs" />
+    <Compile Include="border_\lower\comp_\ObjCompDefault.cs" />
+    <Compile Include="border_\upper\Phrase.cs" />
     <Compile Include="%28co\co\vow\Ee_ofIn.cs" />
     <Compile Include="%28co\co\vow\ee_\VowNeo_ofIn.cs" />
+    <Compile Include="algebra\morp_\Automorphism.cs" />
+    <Compile Include="bound_\IClosed.cs" />
+    <Compile Include="comp\_ReX.cs" />
+    <Compile Include="func\lamda\of_\ICurry.cs" />
+    <Compile Include="IClasp.cs" />
     <Compile Include="id_\ITemped.cs" />
     <Compile Include="id_\ITermed.cs" />
+    <Compile Include="IGuid.cs" />
     <Compile Include="IId.cs" />
+    <Compile Include="IIdentification.cs" />
+    <Compile Include="IIdentifier.cs" />
     <Compile Include="IIdenty.cs" />
     <Compile Include="INom.cs" />
+    <Compile Include="INulable.cs" />
+    <Compile Include="IOp.cs" />
+    <Compile Include="IOp_involve.cs" />
+    <Compile Include="IPhrase.cs" />
     <Compile Include="IRange.cs" />
+    <Compile Include="IUid.cs" />
+    <Compile Include="IUuid.cs" />
+    <Compile Include="IUuuid.cs" />
+    <Compile Include="IWord.cs" />
     <Compile Include="matrix\grid\IBelt.cs" />
     <Compile Include="matrix\grid\IBloc.cs" />
     <Compile Include="matrix\grid\IBunch.cs" />
@@ -213,7 +332,16 @@
     <Compile Include="matrix\grid_\nonslice_\IRows.cs" />
     <Compile Include="matrix\IRows.cs" />
     <Compile Include="matrix\ISlice.cs" />
+    <Compile Include="nilnul0\bit\comp\Converse.cs" />
+    <Compile Include="nilnul0\objs\be_\ISingleton.cs" />
+    <Compile Include="nilnul0\objs\IExtension.cs" />
+    <Compile Include="nilnul0\obj_\bit\Comp.cs" />
+    <Compile Include="nilnul0\obj_\IImperfection.cs" />
+    <Compile Include="nilnul0\obj_\INulable.cs" />
     <Compile Include="nilnul0\obj_\ITyp.cs" />
+    <Compile Include="nilnul0\obj_\IUxp.cs" />
+    <Compile Include="nilnul0\obj_\IXpn.cs" />
+    <Compile Include="nilnul0\obj_\xpn_\IPerpertual.cs" />
     <Compile Include="nilnul0\_obj\typs\IVariant.cs" />
     <Compile Include="nilnul0\_obj\typ\identy\IParse.cs" />
     <Compile Include="nilnul0\_obj\typ\IMember.cs" />
@@ -223,8 +351,17 @@
     <Compile Include="nilnul0\_obj\typ\sub_\xpN_\SomeAttrIncursXpn.cs" />
     <Compile Include="nilnul0\_obj\typ\_identy\_ns\seg_\IVered.cs" />
     <Compile Include="nilnul0\_obj\typ\_identy\_ns\seg_\vered_\NonXpnException.cs" />
+    <Compile Include="nilnul0\_obj\typ_\IBot.cs" />
+    <Compile Include="nilnul0\_obj\typ_\IContexfree.cs" />
+    <Compile Include="nilnul0\_obj\typ_\INoninstantiable.cs" />
     <Compile Include="nilnul0\_obj\typ_\IRecur.cs" />
+    <Compile Include="nilnul0\_obj\typ_\IUnison.cs" />
+    <Compile Include="nilnul0\_obj\typ_\IStateless.cs" />
+    <Compile Include="nilnul0\_obj\typ_\ITop.cs" />
     <Compile Include="nilnul0\_obj\typ_\PrivateClassedInterface.cs" />
+    <Compile Include="nilnul0\_obj\typ_\unison_\INino.cs" />
+    <Compile Include="nilnul0\_obj\typ_\unison_\IVod.cs" />
+    <Compile Include="nilnul0\_obj\typ_\unison_\Vod.cs" />
     <Compile Include="nilnul0\_obj\_typ\Documentation.cs" />
     <Compile Include="nilnul0\_obj\_typ\Concept.cs" />
     <Compile Include="nilnul0\_obj\_typ\concept\IMember.cs" />
@@ -237,22 +374,88 @@
     <Compile Include="nilnul0\_obj\typ\_identy\_ns\seg_\ForStubType.cs" />
     <Compile Include="nilnul0\_obj\typ\_identy\_ns\seg_\ICirca.cs" />
     <Compile Include="nilnul0\_obj\typ\_identy\_ns\seg_\ICategory.cs" />
-    <Compile Include="nilnul\obj\rec\IArity.cs" />
-    <Compile Include="nilnul\obj\rec\IComponent1.cs" />
-    <Compile Include="nilnul\obj\rec\IScala.cs" />
-    <Compile Include="nilnul\obj\rec\IComponent.cs" />
-    <Compile Include="nilnul\obj\tup\IArity.cs" />
-    <Compile Include="nilnul\obj\tup\IComponent.cs" />
-    <Compile Include="nilnul\obj\tup\IScala.cs" />
+    <Compile Include="of_\Binary.cs" />
+    <Compile Include="of_\BinaryI%28T.cs" />
+    <Compile Include="of_\IBinary.cs" />
+    <Compile Include="of_\INary.cs" />
+    <Compile Include="of_\IStr.cs" />
+    <Compile Include="of_\ITernary.cs" />
+    <Compile Include="of_\IUnary.cs" />
+    <Compile Include="IOp%28.cs" />
+    <Compile Include="of_\IUnary1.cs" />
+    <Compile Include="of_\Nary.cs" />
+    <Compile Include="of_\NaryI.cs" />
+    <Compile Include="of_\Ternary.cs" />
+    <Compile Include="of_\TernaryA.cs" />
+    <Compile Include="of_\TernaryI%28T.cs" />
+    <Compile Include="of_\Unary%28T.cs" />
+    <Compile Include="of_\UnaryI.cs" />
+    <Compile Include="op_\binary\cumulator\ICollapse.cs" />
+    <Compile Include="op_\binary\ICascader.cs" />
+    <Compile Include="op_\binary\ICumulator.cs" />
+    <Compile Include="op_\binary\ICurrier.cs" />
+    <Compile Include="op_\binary_\max_\OnComp%28T.cs" />
+    <Compile Include="op_\binary_\max_\onComp_\CompDefault.cs" />
+    <Compile Include="op_\binary_\min_\OnComp%28T.cs" />
+    <Compile Include="op_\binary_\min_\onComp_\CompDefault.cs" />
+    <Compile Include="op_\IOf.cs" />
+    <Compile Include="IOf.cs" />
+    <Compile Include="op_\ITo.cs" />
+    <Compile Include="op_\IUnary.cs" />
+    <Compile Include="op_\of_\IAry.cs" />
+    <Compile Include="op_\ITo%28.cs" />
+    <Compile Include="range\of_\bound_\Reverse.cs" />
+    <Compile Include="range_\bound\of_\unary_\Reverse.cs" />
+    <Compile Include="range_\INondecrease.cs" />
+    <Compile Include="rec\IArity.cs" />
+    <Compile Include="rec\IComponent1.cs" />
+    <Compile Include="rec\IScala.cs" />
+    <Compile Include="rec\IComponent.cs" />
+    <Compile Include="re\_ExtensionsX.cs" />
+    <Compile Include="str\of_\_RepeatX.cs" />
+    <Compile Include="str\re_\Equisize.cs" />
+    <Compile Include="str\re_\Memberwise.cs" />
+    <Compile Include="str\re_\memberwise_\ElReDefault.cs" />
+    <Compile Include="str\re_\Unforked.cs" />
+    <Compile Include="str\strung\op_\binary_\_CartesianX.cs" />
+    <Compile Include="str\to_\scala_\max_\_MappedX.cs" />
+    <Compile Include="str\to_\scala_\min_\_MappedX.cs" />
+    <Compile Include="str\vec\op_\binary_\zip_\_MemberAsSingletonX.cs" />
+    <Compile Include="str\vec\op_\binary_\_ZipX.cs" />
+    <Compile Include="str\vec\_ReI_assumesVec.cs" />
+    <Compile Include="str\vec\re_\_Memberwise_assumesVec.cs" />
+    <Compile Include="str_\IFrugal.cs" />
+    <Compile Include="str_\sans0Started_\started\cast_\_DeheadX.cs" />
+    <Compile Include="str_\sans0Started_\started\cast_\_DetoeX.cs" />
+    <Compile Include="str_\seq\ReI.cs" />
+    <Compile Include="str_\seq\ReOfEnumeratorI.cs" />
+    <Compile Include="str_\started\to_\IScala.cs" />
+    <Compile Include="str_\started\to_\scala_\min_\_MappedX.cs" />
+    <Compile Include="str_\started\to_\scala_\max_\_MappedX.cs" />
+    <Compile Include="str_\started\to_\scala_\NewFolder1\Max.cs" />
+    <Compile Include="str_\started\to_\scala_\NewFolder1\Min.cs" />
+    <Compile Include="tag_\attr_\Recur.cs" />
+    <Compile Include="tup\IArity.cs" />
+    <Compile Include="tup\IComponent.cs" />
+    <Compile Include="tup\IScala.cs" />
     <Compile Include="nom\IVered.cs" />
     <Compile Include="str\co\op_\unary_\SameLong.cs" />
     <Compile Include="str\each_\_BreakEarlyX.cs" />
     <Compile Include="str\each_\_break\_DisposeX.cs" />
     <Compile Include="str\IComponent.cs" />
     <Compile Include="str\IArity.cs" />
+    <Compile Include="tup_\INino.cs" />
     <Compile Include="vec\IArity.cs" />
     <Compile Include="vec\IComponent.cs" />
     <Compile Include="vec\IScala.cs" />
+    <Compile Include="_id\nom_\IPerm.cs" />
+    <Compile Include="_range\border\ICo.cs" />
+    <Compile Include="_range\border_\IClosed.cs" />
+    <Compile Include="_range\border_\ILower.cs" />
+    <Compile Include="_range\border_\IOpen.cs" />
+    <Compile Include="_range\border_\IUpper.cs" />
+    <Compile Include="_range\IBorder.cs" />
+    <Compile Include="_collection_\HasI.cs" />
     <Compile Include="_identy\IDub.cs" />
     <Compile Include="_identy\ISur.cs" />
     <Compile Include="_identy\_Nomina.cs" />
@@ -338,18 +541,18 @@
     <Compile Include="nilnul0\objs_\IStr.cs" />
     <Compile Include="nilnul0\obj_\dense\border\co\be_\Dwelt.cs" />
     <Compile Include="nilnul0\obj_\dense\border\co\be_\dwelt_\Single1spannedDefault.cs" />
-    <Compile Include="%28border\border\co\be_\Single.cs" />
-    <Compile Include="%28border\border\co\be_\single_\CompDefault.cs" />
-    <Compile Include="%28border\border\co\be_\spanned_\EqDefault.cs" />
-    <Compile Include="%28border\border\co\be_\single_\EqDefault.cs" />
-    <Compile Include="%28border\border\co\be_\Spanned.cs" />
-    <Compile Include="%28border\border\co\VowI.cs" />
-    <Compile Include="%28border\border\eq_\MarkEqDefault.cs" />
-    <Compile Include="%28border\border\eq_\Eq.cs" />
-    <Compile Include="%28box\%28retiring\Box%28TOriginal%29 - Copy.cs" />
-    <Compile Include="%28box\Box_ofIn.cs" />
-    <Compile Include="%28box\BoxRef.cs" />
-    <Compile Include="%28box\box_\ofRef_\BoxRef.cs" />
+    <Compile Include="border\co\be_\Single.cs" />
+    <Compile Include="border\co\be_\single_\CompDefault.cs" />
+    <Compile Include="border\co\be_\spanned_\EqDefault.cs" />
+    <Compile Include="border\co\be_\single_\EqDefault.cs" />
+    <Compile Include="border\co\be_\Spanned.cs" />
+    <Compile Include="border\co\VowI.cs" />
+    <Compile Include="border\eq_\MarkEqDefault.cs" />
+    <Compile Include="border\eq_\Eq.cs" />
+    <Compile Include="%28box_\%28retiring\Box%28TOriginal%29 - Copy.cs" />
+    <Compile Include="%28box_\Box_ofIn.cs" />
+    <Compile Include="%28box_\BoxRef.cs" />
+    <Compile Include="%28box_\box_\ofRef_\BoxRef.cs" />
     <Compile Include="%28co\co\BeI_ofRef.cs" />
     <Compile Include="%28co\co\Be.cs" />
     <Compile Include="%28co\co\be\Vow.cs" />
@@ -374,12 +577,12 @@
     <Compile Include="%28eq%29\eq_\NulyOv.cs" />
     <Compile Include="%28eq%29\eq_\ovNuly_\EqDefault4Struct.cs" />
     <Compile Include="%28eq%29\eq_\ovNuly_\EqDefault.cs" />
-    <Compile Include="%28vow\VowI_ofIn.cs" />
-    <Compile Include="%28vow\vow\Ee_ofIn.cs" />
-    <Compile Include="%28vow\vow\Ee_ofIn1.cs" />
-    <Compile Include="%28vow\vow\ee_\VowDefault_ofIn.cs" />
-    <Compile Include="%28vow\vow\_ee_\vow_\RetRefI.cs" />
-    <Compile Include="%28vow\_vow_\OfInI.cs" />
+    <Compile Include="VowI_ofIn.cs" />
+    <Compile Include="vow\Ee_ofIn.cs" />
+    <Compile Include="vow\Ee_ofIn%28T.cs" />
+    <Compile Include="vow\ee_\VowDefault_ofIn.cs" />
+    <Compile Include="vow\_ee_\vow_\RetRefI.cs" />
+    <Compile Include="_vow_\OfInI.cs" />
     <Compile Include="expr_\typed_\generi\be\NewFolder1\Vow - Copy.cs" />
     <Compile Include="expr_\typed_\generi\be\NewFolder1\vow_ - Copy\BeDefault.cs" />
     <Compile Include="%28expr%29\expr\be_\calc\NewFolder1\Vow - Copy.cs" />
@@ -424,12 +627,12 @@
     <Compile Include="%28set\set\re_\sub_\NewFolder1\_Subset.cs" />
     <Compile Include="%28set\set_\Duet.cs" />
     <Compile Include="%28set\_set_\ElementEq%28TEq - Copy.cs" />
-    <Compile Include="%28vow\IVow.cs" />
-    <Compile Include="%28vow\Vow_ofRefI.cs" />
-    <Compile Include="%28vow\vow\Ee_byRef.cs" />
-    <Compile Include="%28vow\vow\ee_\VowNeo_byRef.cs" />
-    <Compile Include="%28vow\vow\NewFolder1\Ee1.cs" />
-    <Compile Include="%28vow\vow\_ee_\RetRefI.cs" />
+    <Compile Include="IVow.cs" />
+    <Compile Include="Vow_ofRefI.cs" />
+    <Compile Include="vow\Ee_byRef.cs" />
+    <Compile Include="vow\ee_\VowNeo_byRef.cs" />
+    <Compile Include="vow\NewFolder1\Ee1.cs" />
+    <Compile Include="vow\_ee_\RetRefI.cs" />
     <Compile Include="algebra_\cobiop_\semiring_\Distributive.cs" />
     <Compile Include="algebra_\cobiop_\semiring_\distributive_\rng_\ring\el_\Anilator.cs" />
     <Compile Include="algebra_\cobiop_\semiring_\distributive_\rng_\ring\el_\One.cs" />
@@ -508,7 +711,7 @@
     <Compile Include="nilnul0\objs_\Hexad.cs" />
     <Compile Include="nilnul0\objs_\Triad.cs" />
     <Compile Include="nilnul0\objs_\Tetrad.cs" />
-    <Compile Include="%28border\border\co\be_\IDwelt.cs" />
+    <Compile Include="border\co\be_\IDwelt.cs" />
     <Compile Include="nilnul0\obj_\IDense.cs" />
     <Compile Include="nilnul0\obj_\Monotonic.cs" />
     <Compile Include="nilnul0\obj_\monotonic_\Immutable.cs" />
@@ -633,8 +836,8 @@
     <Compile Include="str\strung\vow\ee_\VowNeo.cs" />
     <Compile Include="str\To.cs" />
     <Compile Include="str\to_\ScalarI.cs" />
-    <Compile Include="str\to_\scalar_\NewFolder1\Max.cs" />
-    <Compile Include="str\to_\scalar_\NewFolder1\Min.cs" />
+    <Compile Include="str\to_\scala_\NewFolder1\Max.cs" />
+    <Compile Include="str\to_\scala_\NewFolder1\Min.cs" />
     <Compile Include="str\to_\_scalar_\OfParams.cs" />
     <Compile Include="str\VowI2.cs" />
     <Compile Include="str\vow\Ee1%28T.cs" />
@@ -657,7 +860,7 @@
     <Compile Include="str_\started\_main1toe\KeepLast.cs" />
     <Compile Include="str_\_started\_\Started%28T.cs" />
     <Compile Include="ClausesX.cs" />
-    <Compile Include="Tags.cs" />
+    <Compile Include="TagsX.cs" />
     <Compile Include="Category.cs" />
     <Compile Include="func_\closed\op_\unary_\Iterated.cs" />
     <Compile Include="func_\closed\op_\unary_\iterate_\Unitalized.cs" />
@@ -668,7 +871,7 @@
     <Compile Include="matrix\Eq.cs" />
     <Compile Include="matrix\eq_\ElEqDefault.cs" />
     <Compile Include="nilnul0\Obj0nulEs.cs" />
-    <Compile Include="nilnul0\Obj0nul.cs" />
+    <Compile Include="nilnul0\IObj0nul.cs" />
     <Compile Include="nilnul0\_obj\typ\Family.cs" />
     <Compile Include="nilnul0\_obj\typ\member\Attr_.cs" />
     <Compile Include="nilnul0\_obj\typ_\nonref\static_\fields\Init.cs" />
@@ -801,7 +1004,7 @@
     <Compile Include="nilnul0\_obj\typ\re_\Sup.cs" />
     <Compile Include="nilnul0\_obj\typ\re_\Sub.cs" />
     <Compile Include="nilnul0\_obj\typ_\interface_\Membered.cs" />
-    <Compile Include="nilnul0\_obj\typ_\interface_\Marker.cs" />
+    <Compile Include="nilnul0\_obj\typ_\interface_\IMarker.cs" />
     <Compile Include="op_\binary\BeI.cs" />
     <Compile Include="op_\binary\be_\IdempotentI.cs" />
     <Compile Include="op_\binary\be_\_commutative\OnObjs.cs" />
@@ -1310,7 +1513,7 @@
     <Compile Include="tensor_\struc_\IVec.cs" />
     <Compile Include="tup_\Arity.cs" />
     <Compile Include="tup_\Trio.cs" />
-    <Compile Include="tup_\Empty.cs" />
+    <Compile Include="tup_\_EmpleX.cs" />
     <Compile Include="tup_\Single.cs" />
     <Compile Include="vec\Compart.cs" />
     <Compile Include="vec\Eq.cs" />
@@ -1450,15 +1653,25 @@
     <Compile Include="_id\_nom\ITerm.cs" />
     <Compile Include="_id\_nom\terms\IInfixed.cs" />
     <Compile Include="_id\_nom\term\adfixesed_\ISuffixesed.cs" />
-    <Compile Include="_id\_nom\term\circa_\Nontrivia.cs" />
-    <Compile Include="_id\_nom\term\circa_\presed\ISuffixesed.cs" />
-    <Compile Include="_id\_nom\term\circa_\pre0no\ISuffixesed.cs" />
-    <Compile Include="_id\_nom\term\circa_\Prefixed.cs" />
-    <Compile Include="_id\_nom\term\circa_\pre\ISuffixesed.cs" />
+    <Compile Include="_id\_nom\term\extered_\IRear.cs" />
+    <Compile Include="_id\_nom\term\extered_\IFore.cs" />
+    <Compile Include="_id\_nom\term\extersed_\IPre0no.cs" />
+    <Compile Include="_id\_nom\term\extersed_\IPrefixed.cs" />
+    <Compile Include="_id\_nom\term\extersed_\IWung.cs" />
+    <Compile Include="_id\_nom\term\extersed_\ITrivia.cs" />
+    <Compile Include="_id\_nom\term\extersed_\Nontrivia.cs" />
+    <Compile Include="_id\_nom\term\extersed_\presed\ISuffixesed.cs" />
+    <Compile Include="_id\_nom\term\extersed_\pre0no\ISuffixesed.cs" />
+    <Compile Include="_id\_nom\term\extersed_\INone.cs" />
+    <Compile Include="_id\_nom\term\extersed_\pre\ISuffixesed.cs" />
     <Compile Include="_id\_nom\term\co\ILigature.cs" />
-    <Compile Include="_id\_nom\term\extsed\Adfixed.cs" />
-    <Compile Include="_id\_nom\term\extsed\Adfixsed.cs" />
-    <Compile Include="_id\_nom\term\extsed\_adfixed\IAdfix.cs" />
+    <Compile Include="_id\_nom\term\extersed\IAdfixed.cs" />
+    <Compile Include="_id\_nom\term\extersed\IAdfixsed.cs" />
+    <Compile Include="_id\_nom\term\extersed\_adfixed\IAdfix.cs" />
+    <Compile Include="_id\_nom\term\extersed_\trivia\IExtension.cs" />
+    <Compile Include="_id\_nom\term\extersed_\trivia\IMember.cs" />
+    <Compile Include="_id\_nom\term\extersed_\wung\IExtend.cs" />
+    <Compile Include="_id\_nom\term\extersed_\wung\IMember.cs" />
     <Compile Include="_id\_nom\term\IAdfixesed.cs" />
     <Compile Include="_id\_nom\term\IAdfixed.cs" />
     <Compile Include="_id\_nom\term\IAdfixed0circa.cs" />
@@ -1471,8 +1684,15 @@
     <Compile Include="_id\_nom\term\IPrefixsed.cs" />
     <Compile Include="_id\_nom\term\IPosteriorsed.cs" />
     <Compile Include="_id\_nom\term\IPrior.cs" />
+    <Compile Include="_id\_nom\term\IPriorsed.cs" />
     <Compile Include="_id\_nom\term\phrase_\TailUp.cs" />
-    <Compile Include="_id\_nom\term\posteriorsed\IPrefixed.cs" />
+    <Compile Include="_id\_nom\term\postiorsed\IPrefixesed.cs" />
+    <Compile Include="_id\_nom\term\postiored\IRestriction.cs" />
+    <Compile Include="_id\_nom\term\postiored\IPriored.cs" />
+    <Compile Include="_id\_nom\term\postiorsed\IPrefixed.cs" />
+    <Compile Include="_id\_nom\term\priored\IPremise.cs" />
+    <Compile Include="_id\_nom\term\priored\IPostiored.cs" />
+    <Compile Include="_id\_nom\term\priorsed\ISuffixed.cs" />
     <Compile Include="_id\_nom\term\priorsed\ISuffixesed.cs" />
     <Compile Include="_id\_nom\term\_adfixed\adfix_\prefix_\ForInterface.cs" />
     <Compile Include="_id\_nom\term\_adfixed\adfix_\suffix_\ForInterface.cs" />
@@ -1488,22 +1708,28 @@
     <Compile Include="_id\_nom\term_\parenthood\_phrase\GroupingByUnderline.cs" />
     <Compile Include="_id\_nom\term_\primitive\IPhrase.cs" />
     <Compile Include="_id\_nom\_term\idiom\co\ILigature.cs" />
+    <Compile Include="_id\_nom\_term\idiom\phrase_\_case\Li_.cs" />
     <Compile Include="_id\_nom\_term\idiom_\INulable.cs" />
     <Compile Include="_id\_nom\_term\IIdiom.cs" />
     <Compile Include="_id\_nom\_term\idiom\phrase_\_CasingX.cs" />
     <Compile Include="_id\_nom\_term\_idiom\notion_\IStub.cs" />
     <Compile Include="_id\_nom\_term\_idiom\notion_\Junc.cs" />
     <Compile Include="_id\_nom\_term\_idiom\INotion.cs" />
-    <Compile Include="_id\_nom\_term\_idiom\notion_\stub_\abbre\IAbbreviation.cs" />
+    <Compile Include="_id\_nom\_term\_idiom\notion_\stub_\abbre\IExtend.cs" />
     <Compile Include="_id\_nom\_term\_idiom\notion_\stub_\IAbbreviation.cs" />
     <Compile Include="_id\_nom\_term\_idiom\notion_\stub_\abbre_\IAcronym.cs" />
     <Compile Include="_id\_nom\_term\_idiom\notion_\stub_\Es.cs" />
+    <Compile Include="_id\_nom\_term\_idiom\notion_\stub_\IMain.cs" />
     <Compile Include="_id\_nom\_term\_idiom\notion_\stub_\INulable.cs" />
     <Compile Include="_id\_nom\_term_\IHier.cs" />
     <Compile Include="_matrix\Dimensions.cs" />
     <Compile Include="_matrix\Mesh.cs" />
+    <Compile Include="_op_\IIn0out.cs" />
+    <Compile Include="_op_\io_\IIn.cs" />
+    <Compile Include="_op_\IRet.cs" />
     <Compile Include="_procedure\Call.cs" />
     <Compile Include="_procedure\env_\Incremental.cs" />
+    <Compile Include="_RangeX.cs" />
     <Compile Include="_rec_\Arity.cs" />
     <Compile Include="_seq_\Rest.cs" />
     <Compile Include="_stream_\_next\Morph%28T.cs" />
@@ -1513,8 +1739,8 @@
     <Compile Include="func\expr_\SelfRef.cs" />
     <Compile Include="str\comparer_\Comp%28TEl,TElComp - Copy.cs" />
     <Compile Include="nilnul0\objs\Aggregate.cs" />
-    <Compile Include="str\re_\Align.cs" />
-    <Compile Include="str\re_\align_\EqDefault.cs" />
+    <Compile Include="str\re_\NewFolder1\Align.cs" />
+    <Compile Include="str\re_\unforked_\EqDefault.cs" />
     <Compile Include="nilnul0\objs\IndexOfX.cs" />
     <Compile Include="op_\unary\recur\Slider.cs" />
     <Compile Include="Procedure.cs" />
@@ -1552,10 +1778,10 @@
     <Compile Include="op_\binary_\commutable_\max_\ComparerDefault.cs" />
     <Compile Include="op_\binary_\min\Cumulator.cs" />
     <Compile Include="op_\binary_\min\cumulator_\ComparerDefault.cs" />
-    <Compile Include="op_\binary_\min\cumulator_\ordDefault_\ComparerDefault.cs" />
+    <Compile Include="op_\binary_\min\cumulator_\ordDefault_\IniDefault.cs" />
     <Compile Include="op_\binary_\max\Cumulator.cs" />
     <Compile Include="op_\binary_\max\cumulator_\ComparerDefault.cs" />
-    <Compile Include="op_\binary_\max\cumulator_\compDefault_\ComparerDefault.cs" />
+    <Compile Include="op_\binary_\max\cumulator_\compDefault_\IniDefault.cs" />
     <Compile Include="op_\of_\Cast.cs" />
     <Compile Include="op_\of_\up_\Constrict.cs" />
     <Compile Include="op_\unary\ed_\Ed.cs" />
@@ -1572,7 +1798,7 @@
     <Compile Include="op_\unary\_call\ArgOpA%28TOp,TArg.cs" />
     <Compile Include="calc_\calc_\_call_\OpI.cs" />
     <Compile Include="calc_\calc_\_call_\op_\Defaulted.cs" />
-    <Compile Include="op_\binary\cumulator\be_\Unardable.cs" />
+    <Compile Include="op_\binary\cumulator\be_\UnardableI.cs" />
     <Compile Include="op_\binary\cumulator_\unardable\be_\Aggregatable.cs" />
     <Compile Include="op_\unary\_call\opArg_\OpDefaulted.cs" />
     <Compile Include="op_\unary\_ed_\ResultA - Copy.cs" />
@@ -1595,8 +1821,8 @@
     <Compile Include="stream_\scroll_\Lookahead.cs" />
     <Compile Include="stream_\scroll_\Slider.cs" />
     <Compile Include="stream_\slider_\Preview.cs" />
-    <Compile Include="%28vow\vow\_ee_\Vow.cs" />
-    <Compile Include="%28vow\_vow\FailException1.cs" />
+    <Compile Include="vow\_ee_\Vow.cs" />
+    <Compile Include="_vow\FailException1.cs" />
     <Compile Include="Attr.cs" />
     <Compile Include="attr_\Meta.cs" />
     <Compile Include="attr_\Info.cs" />
@@ -1674,7 +1900,7 @@
     <Compile Include="str_\seq\comp_\NewFolder1\Comp%28T.cs" />
     <Compile Include="str_\seq\comp_\NewFolder1\CompI.cs" />
     <Compile Include="str_\seq\comp_\ElOfStruct.cs" />
-    <Compile Include="str_\Started%28T - Copy.cs" />
+    <Compile Include="str_\%28retiring\Started%28T - Copy.cs" />
     <Compile Include="str_\started\Cascade.cs" />
     <Compile Include="str_\started\Op.cs" />
     <Compile Include="str_\started\op_\Unary.cs" />
@@ -1704,15 +1930,15 @@
     <Compile Include="nilnul0\%28retiring\ObjsI2%28T.cs" />
     <Compile Include="nilnul0\Objs arr.cs" />
     <Compile Include="nilnul0\ObjsI3%28T.cs" />
-    <Compile Include="str\to_\scalar_\Max.cs" />
-    <Compile Include="str\to_\scalar_\Min.cs" />
+    <Compile Include="str\to_\scala_\Max.cs" />
+    <Compile Include="str\to_\scala_\Min.cs" />
     <Compile Include="nilnul0\objs\Phrase.cs" />
-    <Compile Include="nilnul0\objs\Re.cs" />
+    <Compile Include="nilnul0\objs\ReI.cs" />
     <Compile Include="str\re_\InitialSegment.cs" />
     <Compile Include="str\re_\init_\EqDefault.cs" />
     <Compile Include="str_\SeqI.cs" />
-    <Compile Include="str_\started\single_\Min.cs" />
-    <Compile Include="str_\started\single_\Max.cs" />
+    <Compile Include="str_\started\to_\scala_\Min.cs" />
+    <Compile Include="str_\started\to_\scala_\Max.cs" />
     <Compile Include="str_\started~\Started%28T.cs" />
     <Compile Include="str_\started~\StartedI1%28T,TTail.cs" />
     <Compile Include="str_\Xpn.cs" />
@@ -1730,7 +1956,7 @@
     <Compile Include="nilnul0\vod.cs" />
     <Compile Include="nilnul0\_obj\typ_\nilable_\Unprimable.cs" />
     <Compile Include="nilnul0\_obj\typ_\nilable_\unprimable_\NotSingularable.cs" />
-    <Compile Include="nilnul0\_obj\typ_\nilable_\unprimable_\SingletonByDefault%28T%29.cs" />
+    <Compile Include="nilnul0\_obj\typ_\nilable_\unprimable_\Singleton.cs" />
     <Compile Include="nilnul0\_obj\typ_\nilable_\unprimable_\ISingular.cs" />
     <Compile Include="nilnul0\_obj\typ_\Nilable.cs" />
     <Compile Include="nulable\Comp.cs" />
@@ -1785,8 +2011,8 @@
     <Compile Include="%28set\_set_\memberEq_\EqDefaulted.cs" />
     <Compile Include="stream\Stock.cs" />
     <Compile Include="str\be_\_DistinctX.cs" />
-    <Compile Include="%28vow\vow_\DenyEverything.cs" />
-    <Compile Include="%28vow\vow_\xpN_\OfHeir.cs" />
+    <Compile Include="vow_\DenyEverything.cs" />
+    <Compile Include="vow_\xpN_\OfHeir.cs" />
     <Compile Include="nilnul0\obj_\bit\%28retiring\Vow - Copy.cs" />
     <Compile Include="nilnul0\obj_\bit\vow_\True.cs" />
     <Compile Include="nilnul0\obj_\bit\vow_\true_\xpN_\OfThis.cs" />
@@ -1819,8 +2045,8 @@
     <Compile Include="stream_\slider\of_\seq_\Cyclic - Copy.cs" />
     <Compile Include="stream_\_slider\scroll~\Slider - Copy.cs" />
     <Compile Include="stream_\_slider\CursorX.cs" />
-    <Compile Include="stream_\_slider\_skim_\Current%28T - Copy.cs" />
-    <Compile Include="stream_\_slider\_skim_\MoveNext - Copy.cs" />
+    <Compile Include="stream_\_slider\_skim_\NewFolder1\Current%28T - Copy.cs" />
+    <Compile Include="stream_\_slider\_skim_\NewFolder1\MoveNext - Copy.cs" />
     <Compile Include="stream~\StreamI - Copy %282%29.cs" />
     <Compile Include="stream\Cumulated.cs" />
     <Compile Include="str\AsSeq.cs" />
@@ -1901,37 +2127,37 @@
     <Compile Include="%28be\be\_vow\xpn_\NegativeException.cs" />
     <Compile Include="%28be\be_\and\Vow.cs" />
     <Compile Include="%28be\be_\and\vow\En.cs" />
-    <Compile Include="%28border\border\%28retiring\Duo1.cs" />
-    <Compile Include="%28border\border\%28retiring\DuoI%28T.cs" />
-    <Compile Include="%28border\border\be_\Open.cs" />
-    <Compile Include="%28border\border\Co.cs" />
-    <Compile Include="%28border\border\Comp.cs" />
-    <Compile Include="%28border\border\comp\Re.cs" />
-    <Compile Include="%28border\border\comp_\Upper.cs" />
-    <Compile Include="%28border\border\comp_\Lower.cs" />
+    <Compile Include="border\%28retiring\Duo1.cs" />
+    <Compile Include="border\%28retiring\DuoI%28T.cs" />
+    <Compile Include="border\be_\Open.cs" />
+    <Compile Include="border\Co.cs" />
+    <Compile Include="border\Comp.cs" />
+    <Compile Include="border\comp_\lower\Re.cs" />
+    <Compile Include="border\comp_\Upper.cs" />
+    <Compile Include="border\comp_\Lower.cs" />
     <Compile Include="bound\be_\Close.cs" />
-    <Compile Include="%28border\border\DuoI%28T.cs" />
-    <Compile Include="%28border\border\Eq.cs" />
-    <Compile Include="%28border\border\_co_\%28retiring\ToTxtA.cs" />
-    <Compile Include="%28border\border\_co_\Borders.cs" />
-    <Compile Include="%28border\border\_co_\Upper.cs" />
-    <Compile Include="%28border\border\_co_\LowerI.cs" />
-    <Compile Include="%28border\border\_co_\lower\%28retiring\ToTxt.cs" />
-    <Compile Include="%28border\border\_co_\lower\ToTxt.cs" />
-    <Compile Include="%28border\border\_co_\ToTxtA.cs" />
-    <Compile Include="%28border\border\_co_\upper\%28retiring\ToTxt.cs" />
-    <Compile Include="%28border\border\_co_\upper\ToTxt.cs" />
-    <Compile Include="%28border\border_\CoopI.cs" />
-    <Compile Include="%28border\border_\coop_\UpperI.cs" />
-    <Compile Include="%28border\border_\coop_\LowerI.cs" />
-    <Compile Include="%28border\_border_\at\comp_\Upper.cs" />
-    <Compile Include="%28border\_border_\at\comp_\Lower.cs" />
-    <Compile Include="%28border\_border_\Blank.cs" />
-    <Compile Include="%28border\_border_\Border.cs" />
-    <Compile Include="%28border\_border_\MarkI.cs" />
-    <Compile Include="%28box\Box_pub%28TOriginal.cs" />
-    <Compile Include="%28box\box_\OfDefault.cs" />
-    <Compile Include="%28box\box_\OfNew.cs" />
+    <Compile Include="border\DuoI%28T.cs" />
+    <Compile Include="border\Eq.cs" />
+    <Compile Include="border\_co_\%28retiring\ToTxtA.cs" />
+    <Compile Include="border\_co_\Borders.cs" />
+    <Compile Include="border\_co_\Upper.cs" />
+    <Compile Include="border\_co_\LowerI.cs" />
+    <Compile Include="border\_co_\lower\%28retiring\ToTxt.cs" />
+    <Compile Include="border\_co_\lower\ToTxt.cs" />
+    <Compile Include="border\_co_\ToTxtA.cs" />
+    <Compile Include="border\_co_\upper\%28retiring\ToTxt.cs" />
+    <Compile Include="border\_co_\upper\ToTxt.cs" />
+    <Compile Include="border_\CoopI.cs" />
+    <Compile Include="border_\coop_\UpperI.cs" />
+    <Compile Include="border_\coop_\LowerI.cs" />
+    <Compile Include="_border_\at\comp_\Upper.cs" />
+    <Compile Include="_border_\at\comp_\Lower.cs" />
+    <Compile Include="_border_\Blank.cs" />
+    <Compile Include="_border_\Border.cs" />
+    <Compile Include="_border_\MarkI.cs" />
+    <Compile Include="%28box_\Box_pub%28TOriginal.cs" />
+    <Compile Include="%28box_\box_\OfDefault.cs" />
+    <Compile Include="%28box_\box_\OfNew.cs" />
     <Compile Include="calc_\calc_\_\CallI%28TOp.cs" />
     <Compile Include="calc_\calc_\call_\binary_\ClosedI.cs" />
     <Compile Include="calc_\calc_\call_\binary_\ClosedA.cs" />
@@ -2068,7 +2294,7 @@
     <Compile Include="str\eq~\Eq.cs" />
     <Compile Include="str_\enum2Arr_\BoxEnumerable.cs" />
     <Compile Include="str_\Enumerable2Arr.cs" />
-    <Compile Include="str_\Started%28T.cs" />
+    <Compile Include="str_\Started5.cs" />
     <Compile Include="str_\StartedA1%28T.cs" />
     <Compile Include="str_\started\CastI.cs" />
     <Compile Include="str_\started\cast_\RemoveLastN.cs" />
@@ -2096,7 +2322,7 @@
     <Compile Include="op_\binary_\CommutableI.cs" />
     <Compile Include="op_\binary_\_nilable\UnitI.cs" />
     <Compile Include="op_\binary_\_unitable\UnitI - Copy.cs" />
-    <Compile Include="op_\NularyI%28T.cs" />
+    <Compile Include="op_\NaryI.cs" />
     <Compile Include="op_\BinaryI%28T.cs" />
     <Compile Include="op_\vec_\%28retiring\UnaryI - Copy.cs" />
     <Compile Include="op_\_binary_\Closed%28.cs" />
@@ -2173,12 +2399,12 @@
     <Compile Include="%28twin\twin\BeA.cs" />
     <Compile Include="%28twin\twin\BindI.cs" />
     <Compile Include="%28var\_var_\Blank.cs" />
-    <Compile Include="%28vow\VowI2.cs" />
-    <Compile Include="%28vow\vow\NewFolder1\EeI - Copy.cs" />
-    <Compile Include="%28vow\vow\Ee_byRef1.cs" />
-    <Compile Include="%28vow\vow\ee_\VowDefault.cs" />
-    <Compile Include="%28vow\vow\_ee_\EdI.cs" />
-    <Compile Include="%28vow\_vow\FailException.cs" />
+    <Compile Include="VowI2.cs" />
+    <Compile Include="vow\NewFolder1\EeI - Copy.cs" />
+    <Compile Include="vow\Ee_byRef1.cs" />
+    <Compile Include="vow\ee_\VowDefault.cs" />
+    <Compile Include="vow\_ee_\EdI.cs" />
+    <Compile Include="_vow\FailException.cs" />
     <Compile Include="str_\buffer_\list_\Buffer.cs" />
     <Compile Include="stream\FetchX.cs" />
     <Compile Include="stream\Buffered.cs" />
@@ -2234,13 +2460,13 @@
     <Compile Include="var\_sortie_\BlankI.cs" />
     <Compile Include="var\_set_\BlankI.cs" />
     <Compile Include="%28vow\%28retiring\VowA - Copy.cs" />
-    <Compile Include="%28vow\vow_\%28retiring\NewFolder1\True.cs" />
-    <Compile Include="%28vow\vow_\Unacceptable.cs" />
-    <Compile Include="%28vow\vow_\xpN_\Unacceptable.cs" />
-    <Compile Include="%28vow\vow_\true_\xpn_\Unacceptable.cs" />
-    <Compile Include="%28vow\vow_\xpN_\unacceptable_\OfVow.cs" />
-    <Compile Include="%28vow\_vow_\BlankI.cs" />
-    <Compile Include="%28vow\_vow_\Xpn.cs" />
+    <Compile Include="vow_\%28retiring\NewFolder1\True.cs" />
+    <Compile Include="vow_\Unacceptable.cs" />
+    <Compile Include="vow_\xpN_\Unacceptable.cs" />
+    <Compile Include="vow_\true_\xpn_\Unacceptable.cs" />
+    <Compile Include="vow_\xpN_\unacceptable_\OfVow.cs" />
+    <Compile Include="_vow_\BlankI.cs" />
+    <Compile Include="_vow_\Xpn.cs" />
     <Compile Include="ActI%28T.cs" />
     <Compile Include="ChoiceI.cs" />
     <Compile Include="ClonableI%28T.cs" />
@@ -2330,12 +2556,12 @@
     <Compile Include="str_\seq\phrase_\join_\Line.cs" />
     <Compile Include="str_\seq\phrase_\join_\Empty.cs" />
     <Compile Include="str_\seq\phrase_\join_\Comma.cs" />
-    <Compile Include="str_\started\single_\Tip.cs" />
-    <Compile Include="%28vow\vow~\NewFolder1\Vow.cs" />
+    <Compile Include="str_\started\to_\scala_\Tip.cs" />
+    <Compile Include="vow~\NewFolder1\Vow.cs" />
     <Compile Include="%28vow\%28retiring\VowA.cs" />
     <Compile Include="%28vow\%28retiring\NewFolder1\VowI.cs" />
-    <Compile Include="%28vow\vow_\%28retiring\None%28T.cs" />
-    <Compile Include="%28vow\_vow_\VowI.cs" />
+    <Compile Include="vow_\%28retiring\None%28T.cs" />
+    <Compile Include="_vow_\VowI.cs" />
     <Compile Include="AggregateI.cs" />
     <Compile Include="ConstructI.cs" />
     <Compile Include="dict\Eq%28TKey,TKeyEq, TVal,TValEq.cs" />
@@ -2437,7 +2663,7 @@
     <Compile Include="str_\seq\Comp%28T.cs" />
     <Compile Include="str_\seq\CompI.cs" />
     <Compile Include="str_\%28seq~\EnumableI.cs" />
-    <Compile Include="str_\sans0Started_\started\to_\str_\Tail.cs" />
+    <Compile Include="str_\sans0Started_\started\cast_\NewFolder1\Tail.cs" />
     <Compile Include="op_\ToI.cs" />
     <Compile Include="op_\_to\ToI.cs" />
     <Compile Include="CategorizeI.cs" />
@@ -2506,39 +2732,39 @@
     <Compile Include="_sortie_\%28retiring\Eq.cs" />
     <Compile Include="StreamI.cs" />
     <Compile Include="nilnul0\_objs_\_str_\%28retiring\ToArr.cs" />
-    <Compile Include="%28vow\vow\en~\EnI.cs" />
-    <Compile Include="%28vow\vow\en\Eq - Copy.cs" />
-    <Compile Include="%28vow\vow\en~\Ed - Copy.cs" />
-    <Compile Include="%28vow\vow\en\NewFolder1\Eq.cs" />
-    <Compile Include="%28vow\vow\en~\EnA.cs" />
-    <Compile Include="%28vow\vow_\%28retiring\False.cs" />
-    <Compile Include="%28vow\vow_\%28retiring\True.cs" />
-    <Compile Include="%28vow\vow_\aver_\Any.cs" />
-    <Compile Include="%28vow\vow_\aver_\None1.cs" />
-    <Compile Include="%28vow\vow_\aver_\None.cs" />
-    <Compile Include="%28vow\vow_\_none\_none\UnacceptableException.cs" />
-    <Compile Include="%28vow\vow~\Avow.cs" />
-    <Compile Include="%28vow\vow\en\Eq.cs" />
-    <Compile Include="%28vow\vow\en~\AvowedA.cs" />
-    <Compile Include="%28vow\vow_\aver_\False.cs" />
-    <Compile Include="%28vow\vow_\aver_\True.cs" />
-    <Compile Include="%28vow\vow~\AverI.cs" />
+    <Compile Include="vow\en~\EnI.cs" />
+    <Compile Include="vow\en\Eq - Copy.cs" />
+    <Compile Include="vow\en~\Ed - Copy.cs" />
+    <Compile Include="vow\en\NewFolder1\Eq.cs" />
+    <Compile Include="vow\en~\EnA.cs" />
+    <Compile Include="vow_\%28retiring\False.cs" />
+    <Compile Include="vow_\%28retiring\True.cs" />
+    <Compile Include="vow_\aver_\Any.cs" />
+    <Compile Include="vow_\aver_\None1.cs" />
+    <Compile Include="vow_\aver_\None.cs" />
+    <Compile Include="vow_\_none\_none\UnacceptableException.cs" />
+    <Compile Include="vow~\Avow.cs" />
+    <Compile Include="vow\en\Eq.cs" />
+    <Compile Include="vow\en~\AvowedA.cs" />
+    <Compile Include="vow_\aver_\False.cs" />
+    <Compile Include="vow_\aver_\True.cs" />
+    <Compile Include="vow~\AverI.cs" />
     <Compile Include="%28vow\en~\VowedI.cs" />
     <Compile Include="%28vow\en~\VowedA.cs" />
-    <Compile Include="%28vow\vow\en~\En.cs" />
-    <Compile Include="%28vow\vow\en~\VowedA.cs" />
-    <Compile Include="%28vow\vow\en~\VowedI.cs" />
-    <Compile Include="%28vow\vow_\Any.cs" />
-    <Compile Include="%28vow\vow_\%28retiring\NewFolder2\False.cs" />
-    <Compile Include="%28vow\vow_\%28retiring\None.cs" />
-    <Compile Include="%28vow\vow_\%28retiring\NewFolder2\True%28T.cs" />
-    <Compile Include="%28vow\vow_\_none\UnacceptableException.cs" />
-    <Compile Include="%28vow\vow~\AvowI.cs" />
-    <Compile Include="%28vow\vow_\AnyI.cs" />
-    <Compile Include="%28vow\vow_\%28retiring\AcceptNone.cs" />
-    <Compile Include="%28vow\vow~\_aver_\AverI.cs" />
-    <Compile Include="%28vow\vow\_en_\Ed.cs" />
-    <Compile Include="%28vow\vow\_en_\EdI.cs" />
+    <Compile Include="vow\en~\En.cs" />
+    <Compile Include="vow\en~\VowedA.cs" />
+    <Compile Include="vow\en~\VowedI.cs" />
+    <Compile Include="vow_\Any.cs" />
+    <Compile Include="vow_\%28retiring\NewFolder2\False.cs" />
+    <Compile Include="vow_\%28retiring\None.cs" />
+    <Compile Include="vow_\%28retiring\NewFolder2\True%28T.cs" />
+    <Compile Include="vow_\_none\UnacceptableException.cs" />
+    <Compile Include="vow~\AvowI.cs" />
+    <Compile Include="vow_\AnyI.cs" />
+    <Compile Include="vow_\%28retiring\AcceptNone.cs" />
+    <Compile Include="vow~\_aver_\AverI.cs" />
+    <Compile Include="vow\_en_\Ed.cs" />
+    <Compile Include="vow\_en_\EdI.cs" />
     <Compile Include="%28be\be\accumulate_\And.cs" />
     <Compile Include="%28be\be\accumulate_\FroCombine.cs" />
     <Compile Include="%28be\be\accumulate_\_and\Ret.cs" />
@@ -2732,8 +2958,8 @@
     <Compile Include="stream_\slider\_cumulus_\NextAccumulantI.cs" />
     <Compile Include="stream_\slider\_series_\MoveNextI.cs" />
     <Compile Include="stream_\slider\_series_\SeriesI%28T.cs" />
-    <Compile Include="stream_\_slider\_skim_\Current%28T.cs" />
-    <Compile Include="stream_\_slider\_skim_\MoveNext.cs" />
+    <Compile Include="stream_\_slider\_skim_\NewFolder1\Current%28T.cs" />
+    <Compile Include="stream_\_slider\_skim_\NewFolder1\MoveNext.cs" />
     <Compile Include="stream_\_slider\scroll~\Slider.cs" />
     <Compile Include="_stream_\NextI%28T.cs" />
     <Compile Include="nilnul0\Objs.cs" />
@@ -2833,11 +3059,11 @@
     <Compile Include="%28name\name\str\be_\_diff\Extensions.cs" />
     <Compile Include="%28var\_var_\TypeI.cs" />
     <Compile Include="%28vow\%28retiring\VowI.cs" />
-    <Compile Include="%28vow\vow~\VowI.cs" />
+    <Compile Include="vow~\VowI.cs" />
     <Compile Include="%28border\Border.cs" />
-    <Compile Include="%28border\border\%28retiring\Duo.cs" />
+    <Compile Include="border\%28retiring\Duo.cs" />
     <Compile Include="Adapter.cs" />
-    <Compile Include="%28box\Box%28TOriginal%29.cs" />
+    <Compile Include="%28box_\Box%28TOriginal%29.cs" />
     <Compile Include="CastI.cs" />
     <Compile Include="bound_\Closed.cs" />
     <Compile Include="comp\Re%28T.cs" />
@@ -2890,7 +3116,7 @@
     <Compile Include="abstraction\AbstractionI.cs" />
     <Compile Include="ActionX.cs" />
     <Compile Include="Arr.cs" />
-    <Compile Include="%28vow\vow~\Assert.cs" />
+    <Compile Include="vow~\Assert.cs" />
     <Compile Include="calc_\calc_\_\CallI.cs" />
     <Compile Include="CalcI%28T.cs" />
     <Compile Include="_calc_\CalcI.cs" />
@@ -2940,7 +3166,7 @@
     <Compile Include="str_\started\demote_\Tail.cs" />
     <Compile Include="str_\started\NewFolder1\Tail.cs" />
     <Compile Include="nilnul0\_objs_\ToStrI.cs" />
-    <Compile Include="op_\OfI.cs" />
+    <Compile Include="op_\IOf%28.cs" />
     <Compile Include="ParI.cs" />
     <Compile Include="Co I.cs" />
     <Compile Include="PhraseI.cs" />
@@ -3191,7 +3417,7 @@
     <Compile Include="bit\StaticAssert%28T.cs" />
     <Compile Include="bit\TautologyI.cs" />
     <Compile Include="bit\TypeWithPredicate.cs" />
-    <Compile Include="%28box\%28retiring\Box%28TOriginal%29.cs" />
+    <Compile Include="%28box_\%28retiring\Box%28TOriginal%29.cs" />
     <Compile Include="CollectionTostrX.cs" />
     <Compile Include="ConstI%28T%29.cs" />
     <Compile Include="ConstI.cs" />
@@ -3462,7 +3688,7 @@
     <Compile Include="%28var\!retiring\ref_\op\Nullary%28T.cs" />
     <Compile Include="%28var\!retiring\ref_\op\Unary%28T.cs" />
     <Compile Include="%28var\!retiring\ref_\expr\Ref%28T.cs" />
-    <Compile Include="%28be\Be%28D.cs" />
+    <Compile Include="%28be\Be1.cs" />
     <Compile Include="Rel%28D,R.cs" />
     <Compile Include="%28be\BeI%28T.cs" />
     <Compile Include="RelI%28D,R.cs" />
@@ -3589,21 +3815,15 @@
     <None Include="Vec.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="%28accumulate\accumulate_\" />
     <Folder Include="%28alt\alt_\" />
     <Folder Include="%28be\be\convert_\" />
     <Folder Include="%28be\be\vow_\beDefault_\" />
     <Folder Include="%28be\be\_vow_\xpn_\" />
-    <Folder Include="%28border\%28border\border\" />
-    <Folder Include="%28border\border\co\be_\single_\eqDefault\" />
-    <Folder Include="%28border\border\duo\" />
-    <Folder Include="%28border\border_\coop\" />
-    <Folder Include="%28border\border_\coop_\lower\" />
-    <Folder Include="%28border\border_\lowerUpper\" />
     <Folder Include="%28couple\" />
     <Folder Include="%28co\co\op_\of_\" />
     <Folder Include="%28dynam%29\op\" />
     <Folder Include="%28eq%29\eq\neq\" />
+    <Folder Include="%28eq%29\eq_\onFunc_\" />
     <Folder Include="%28expr%29\expr\be_\_closed\closed\" />
     <Folder Include="%28expr%29\expr\be_\_closed\_varOfType\" />
     <Folder Include="%28expr%29\expr\untyped\be_\_calc\visitor_\" />
@@ -3615,11 +3835,7 @@
     <Folder Include="%28set\set\comparer_\" />
     <Folder Include="%28set\set\re_\supset\" />
     <Folder Include="%28set\set_\_sed_\blank_\" />
-    <Folder Include="%28stream\next\" />
     <Folder Include="%28twin\_be_\" />
-    <Folder Include="%28vow\vow\en\eq_\" />
-    <Folder Include="%28vow\vow_\NewFolder1\" />
-    <Folder Include="%28vow\_vow_\xpn_\" />
     <Folder Include="abstraction\op\" />
     <Folder Include="act_\" />
     <Folder Include="algebra_\cobiop_\distributive\be_\" />
@@ -3630,6 +3846,13 @@
     <Folder Include="algebra_\pargoid_\magma_\semigrp_\band_\_lattice\" />
     <Folder Include="algebra_\pargoid_\magma_\semigrp_\monoid_\group_\" />
     <Folder Include="bit\op\binary\_\" />
+    <Folder Include="border\comp_\lower_\" />
+    <Folder Include="border\co\be_\single_\eqDefault\" />
+    <Folder Include="border\co_\lowerUpper\" />
+    <Folder Include="border\duo\" />
+    <Folder Include="border_\coop\" />
+    <Folder Include="border_\coop_\lower\" />
+    <Folder Include="border_\lowerUpper\" />
     <Folder Include="calc_\calc_\call_\unary~\NewFolder1\" />
     <Folder Include="clauz_\tag_\" />
     <Folder Include="collection\op\.retired\" />
@@ -3662,6 +3885,8 @@
     <Folder Include="func_\typed_\uni\" />
     <Folder Include="func_\uni\op_\binary_\associative\" />
     <Folder Include="func_\uni\op_\binary_\associative_\" />
+    <Folder Include="identy\" />
+    <Folder Include="id_\par\" />
     <Folder Include="lex_\serializer_\" />
     <Folder Include="lex_\_byt\_operand\" />
     <Folder Include="matrix\grid_\belt_\" />
@@ -3673,7 +3898,6 @@
     <Folder Include="matrix_\headered_\" />
     <Folder Include="matrix_\square\" />
     <Folder Include="nilnul0\obj0nul\set\" />
-    <Folder Include="nilnul0\objs\be_\" />
     <Folder Include="nilnul0\objs\op_\" />
     <Folder Include="nilnul0\objs_\byCount_\" />
     <Folder Include="nilnul0\objs_\countThree_\" />
@@ -3698,7 +3922,9 @@
     <Folder Include="nilnul0\_obj\typ\co\" />
     <Folder Include="nilnul0\_obj\typ\fields_\" />
     <Folder Include="nilnul0\_obj\typ\inst\" />
+    <Folder Include="nilnul0\_obj\typ\NewFolder1\" />
     <Folder Include="nilnul0\_obj\typ\nomina\" />
+    <Folder Include="nilnul0\_obj\typ\sup_\" />
     <Folder Include="nilnul0\_obj\typ\_identy\ns\" />
     <Folder Include="nilnul0\_obj\typ\_identy\_ns\segs\" />
     <Folder Include="nilnul0\_obj\typ\_identy\_ns\seg\" />
@@ -3710,6 +3936,7 @@
     <Folder Include="nilnul0\_obj\typ_\nonref\static_\fields_\literal\" />
     <Folder Include="nilnul0\_obj\typ_\refer\static_\fields_\" />
     <Folder Include="nilnul0\_obj\typ_\scratchable_\" />
+    <Folder Include="nilnul0\_obj\typ_\unison_\vod_\" />
     <Folder Include="nilnul0\_obj\_name\" />
     <Folder Include="nilnul0\_obj\_typ\concept\member\" />
     <Folder Include="nulable\comp_\nulMax\" />
@@ -3739,6 +3966,8 @@
     <Folder Include="procedure_\pure_\" />
     <Folder Include="procedure_\unpure\to_\pure_\_byStruc\" />
     <Folder Include="procedure_\unpure_\nonrite_\" />
+    <Folder Include="range_\bound\op_\" />
+    <Folder Include="range_\le\" />
     <Folder Include="rec_\str\" />
     <Folder Include="rec_\tup\" />
     <Folder Include="re\op_\binary_\" />
@@ -3759,7 +3988,6 @@
     <Folder Include="stream_\slider\of_\seq_\appendNul\" />
     <Folder Include="stream_\slider\of_\str_\appendNul\" />
     <Folder Include="stream_\slider\windowed_\" />
-    <Folder Include="stream_\_slider_\" />
     <Folder Include="str\%28retiring\NewFolder1\" />
     <Folder Include="str\be\_vow_\onArr_\" />
     <Folder Include="str\be_\be_\" />
@@ -3777,12 +4005,15 @@
     <Folder Include="str\_eq\_elEq\" />
     <Folder Include="str_\%28str\" />
     <Folder Include="str_\sans0Started_\started\aggregate_\" />
+    <Folder Include="str_\sans0Started_\started\to_\str_\" />
     <Folder Include="str_\sans0Started_\started_\NewFolder1\" />
     <Folder Include="str_\seq\be_\distinct_\" />
     <Folder Include="str_\seq\fold_\" />
     <Folder Include="str_\seq_\started_\" />
     <Folder Include="str_\started\op_\unary_\map_\" />
-    <Folder Include="str_\started\to_\" />
+    <Folder Include="str_\started\single_\" />
+    <Folder Include="tag_\attr_\_recur\" />
+    <Folder Include="to_\obj\_to_\" />
     <Folder Include="tup\op\" />
     <Folder Include="tup_\NewFolder1\" />
     <Folder Include="tup_\rec_\" />
@@ -3800,6 +4031,8 @@
     <Folder Include="vec\op_\" />
     <Folder Include="vec\str\" />
     <Folder Include="vec_\couple\" />
+    <Folder Include="vow\en\eq_\" />
+    <Folder Include="vow_\NewFolder1\" />
     <Folder Include="_act_\" />
     <Folder Include="_bound\_lower_\" />
     <Folder Include="_bound_\lowerUpper\" />
@@ -3810,6 +4043,7 @@
     <Folder Include="_func\func\" />
     <Folder Include="_func\input_\_sortie\" />
     <Folder Include="_identy\_nomina\" />
+    <Folder Include="_id\nom_\temp_\" />
     <Folder Include="_id\nom_\termed_\extsed_\" />
     <Folder Include="_id\_nom\term\adfixed\" />
     <Folder Include="_id\_nom\term\adfixed_\" />
@@ -3822,7 +4056,8 @@
     <Folder Include="_id\_nom\_term\_idiom\notion_\stub\" />
     <Folder Include="_lex\" />
     <Folder Include="_matrix\dimension_\" />
-    <Folder Include="_obj\" />
+    <Folder Include="_of\" />
+    <Folder Include="_of_\" />
     <Folder Include="_op_\convert_\" />
     <Folder Include="_parse\phase_\_lex\xpn\" />
     <Folder Include="_parse\phase_\_preproc\xpn\" />
@@ -3834,6 +4069,18 @@
     <Folder Include="_stream\" />
     <Folder Include="_stream_\next\" />
     <Folder Include="_tuple\op\" />
+    <Folder Include="_vow_\xpn_\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <PackageLicenseFile>License.txt</PackageLicenseFile>
+    <!--<PackageLicenseExpression>MIT</PackageLicenseExpression>-->
+    <RequireLicenseAcceptance>false</RequireLicenseAcceptance>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <!--in your nuspec file?-->
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="License.txt" Pack="true" PackagePath="" />
+    <!--LICENSE does work if you set the PackagePath=""-->
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="PostBuildMacros">
@@ -3858,9 +4105,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <PostBuildEventDependsOn>
-	$(PostBuildEventDependsOn);
-	PostBuildMacros;
-</PostBuildEventDependsOn>
+			$(PostBuildEventDependsOn);
+			PostBuildMacros;
+		</PostBuildEventDependsOn>
     <PostBuildEvent>echo ConfigurationName is $(ConfigurationName)
 if $(ConfigurationName) == Release (
 	"NuGet.exe" pack "$(ProjectPath)" -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
@@ -3875,6 +4122,15 @@ if $(ConfigurationName) == Release (
 	if  $(ConfigurationName)==Nuget (
 		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)
 		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision).nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Dev2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-dev
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-dev.nupkg -SkipDuplicate -Source nuget.org
+	)
+	if  $(ConfigurationName)==Sym2nuget (
+		"NuGet.exe" pack "$(ProjectPath)"  -Prop Configuration=$(ConfigurationName) -Exclude **/*.tt -Version @(MajorMinor).$(nilnulPatchRevision)-sym
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source nuget.org
+		"NuGet.exe" push $(TargetName).@(MajorMinor).$(nilnulPatchRevision)-sym.nupkg -SkipDuplicate -Source my
 	)
 )</PostBuildEvent>
   </PropertyGroup>

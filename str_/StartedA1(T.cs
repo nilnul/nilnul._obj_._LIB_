@@ -8,9 +8,13 @@ using System.Threading.Tasks;
 namespace nilnul.obj.str_
 {
 
-	
 
-	
+	/// <summary>
+	/// one element at the beginning, called head.
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="TTail"></typeparam>
+	/// <seealso cref="IFrugal{T}"/>,
 
 	public class StartedA1<T, TTail>
 		: _started_.HeadA<T>

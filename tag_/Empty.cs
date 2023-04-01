@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.tag_
 {
+	/// <summary>
+	/// this allows a trailing ';'
+	/// </summary>
 	class Empty
 	{
 	}

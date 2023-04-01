@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.str_.started.cast_
 {
+	[Obsolete(nameof(_DetoeX))]
 	static public class _DetipX
 	{
 		static public IEnumerable<T> _Detip_ofStarted<T>(this IEnumerable<T> started) {

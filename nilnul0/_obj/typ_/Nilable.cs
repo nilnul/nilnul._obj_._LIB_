@@ -36,6 +36,8 @@ namespace nilnul._obj.typ_
 	///
 	/// the type can have a default implementation subtype, which contains the parameterless ctor. (the type can have nondefault implementation subtype, which has a parameterless ctor inheriting the parameterized ctor of this type.)
 	/// </remarks>
+	/// vs:
+	///		<see cref="IUnison"/>, whileas this means it has a parless ctor, doesnot mean this is a <see cref="IUnison"/>; <see cref="nilable_.IUnprimable"/> means it doesnot have other ctor than the parless ctor, but doesnot mean it is a <see cref="IUnison"/> as we can see an example of <see cref="nilnul.obj.IStream"/> which can have state of where the current is; <see cref="nilable_.unprimable_.ISingulable"/> is a synonym of this;
 	public interface INilable
 	{
 	}

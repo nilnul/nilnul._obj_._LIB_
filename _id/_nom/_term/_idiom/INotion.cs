@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.obj._id._nom._term._idiom
 {
 	/// <summary>
+	/// 
 	/// </summary>
 	/// alias:
 	///		concept

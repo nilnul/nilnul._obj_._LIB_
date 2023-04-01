@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.eq_
 {
+	/// <summary>
+	/// <see cref="obj.comp.re_"/>
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
 	public class OvComparer<T>
 		: nilnul.obj.Box<IComparer<T>>
 		,

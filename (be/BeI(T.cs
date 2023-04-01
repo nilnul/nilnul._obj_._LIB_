@@ -27,17 +27,6 @@ namespace nilnul.obj
 	{
 		bool be(T obj);
 	}
-	/// <summary>
-	/// 
-	/// </summary>
-	/// <remarks>
-	/// 
-	/// </remarks>
-	/// <typeparam name="T"></typeparam>
-	public interface BeI1<in T>:BeI<T>
-	{
-
-	}
 
 	//public abstract class BeA< T>:BeI1<T>
 	//{

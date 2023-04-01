@@ -13,6 +13,12 @@ namespace nilnul.obj.op_._binary_.par1_
 		nilnul.obj.op_._binary_.Par1I<TPar1>
 
 	{
-		TRet op(TPar par, TPar1 par1);
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="x"></param>
+		/// <param name="y"></param>
+		/// <returns></returns>
+		TRet op(TPar x, TPar1 y);
 	}
 }

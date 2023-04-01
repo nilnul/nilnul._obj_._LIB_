@@ -8,7 +8,10 @@ namespace nilnul.obj._id.nom_
 {
 	/// <summary>
 	/// </summary>
-	///			
+	///
+	/// alias:
+	///		perm
+	///		term
 	public interface  ITermed
 	{
 	}

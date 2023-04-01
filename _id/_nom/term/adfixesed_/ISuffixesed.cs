@@ -13,7 +13,7 @@ namespace nilnul.obj._id._nom.term.adfixesed_
 	///			
 	/// </summary>
 	
-	interface ISuffixesed:IAdfixesed
+	public interface ISuffixesed:IAdfixesed
 	{
 
 	}

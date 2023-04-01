@@ -11,6 +11,9 @@ namespace nilnul.obj.tag_
 	/// pharsed as:
 	///		a:b
 	/// </summary>
+	/// alias:
+	///		attr
+	///		prop
 	public interface IKeyVal
 	{
 	}

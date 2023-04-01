@@ -11,6 +11,8 @@ namespace nilnul.obj.comp_
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <typeparam name="TTag"></typeparam>
+	/// alias:
+	///		mapped
 	public class ByTag<T, TTag>
 		:
 		nilnul.obj.Box1<(Func<T, TTag>, IComparer<TTag>)>
@@ -23,6 +25,11 @@ namespace nilnul.obj.comp_
 		public ByTag(Func<T, TTag> func, IComparer<TTag> val) : this((func,val))
 		{
 		}
+
+		public ByTag(Func<T, TTag> func) : this(func,Comparer<TTag>.Default)
+		{
+		}
+
 
 
 		public int Compare(T x, T y)

@@ -43,6 +43,14 @@ namespace nilnul.obj
 			_mark = mark;
 		}
 
+		static public Border<T> CloseOf(T e) {
+			return new Border<T>(true, e);
+		}
+
+		static public Border<T> OpenOf(T e) {
+			return new Border<T>(false, e);
+		}
+
 		
 
 	}

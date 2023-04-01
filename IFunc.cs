@@ -7,6 +7,9 @@ using System.Text;
 
 namespace nilnul.obj
 {
+	/// <summary>
+	/// this is <see cref="real.IOp"/>; but it's not only <see cref="real.IOp"/>, but also <see cref="real.IExpr"/> as the body/logic; so it's structured data which can be compiled into an <see cref="obj.IOp"/>;
+	/// </summary>
 	public interface IFunc { }
 
 	/// <summary>

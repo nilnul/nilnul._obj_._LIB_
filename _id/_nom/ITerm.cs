@@ -32,6 +32,9 @@ namespace nilnul.obj._id._nom
 	/// 
 	///			
 	/// </remarks>
+	/// alias:
+	///		gram
+	///			like in 2-gram, n-gram
 	class ITerm
 	{
 	}

@@ -6,24 +6,12 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj
 {
-	/// <summary>
-	/// a str or a stream. conceptualy same as <see cref="nameof(IEnumerable{T})"/>
-	/// </summary>
-	/// <remarks>
-	/// recursion might be terminated by the termination condition.
-	/// if the recursion is finite, it's a str
-	/// if the recursion is infinite, it's a stream
-	/// sometimes it is hard to tell whether it is finite or infinite. eg:Collatz seqence.
-	/// </remarks>
-	public interface ISeq { }	//for marker interface, the body is inline.
-
-	public interface ISeq<T>:ISeq { }
 	/*
 	 if it's finite, we call it Repeated;
 	if it's infinite, we call it Recured.
 	 */
 	/// <summary>
-	/// 
+	/// <see cref="IStr"/> or <see cref="IStream"/>
 	/// </summary>
 	static public class SeqX
 	{

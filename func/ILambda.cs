@@ -10,7 +10,7 @@ namespace nilnul.obj.func
 	/// cuz it's functional of func, hence the pars are of type "Func", ie, <see cref="func.expr_.IVar"/>, and the body is <see cref="func.IExpr"/>
 	/// 
 	/// <summary>
-	/// it's a function of func.
+	/// it's a function of func. in nilnul, repetive notions are renamed to a new term;
 	/// lambda is the parameterize of function that in turn is the parameterization of expr.
 	/// lambda is higher ordered with respect to func, as in lambda, we can operate on func, and returns func.
 	/// So it's defined based on <see cref="func.IExpr"/>. The logic to transform one func to another might be hidden logic in the body of the function of func, including the <see cref="func.IOp"/>
@@ -21,7 +21,7 @@ namespace nilnul.obj.func
 	/// lambda as func on <see cref="obj.IFunc"/> is like <see cref="obj.IFunc"/> to <see cref="IObj"/>
 	/// 
 	/// alias:
-	///		lambda
+	///		lamda
 	///			avoiding use of lambda, as it's used in greek letter.
 	/// vs：
 	///		<see cref="func.ICalc"/>
@@ -30,6 +30,7 @@ namespace nilnul.obj.func
 	///			
 	///	vs:	<see cref="IFunc"/>
 	///			func's par can be func. But func's body is taken as an <see cref="obj.IExpr"/>, which might be a nonfunc.expr (not <see cref="func.IExpr"/>)
+	///				whileas this is a func of func, and every par stands for a func, not obj;
 
 	public interface ILamda
 	{

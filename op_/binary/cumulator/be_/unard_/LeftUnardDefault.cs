@@ -8,6 +8,7 @@ namespace nilnul.obj.op_.binary.cumulator.be_.unard_
 {
 	/// <summary>
 	/// </summary>
+	/// <see cref="binary.converse.cumulator"/>
 	public class LeftUnardDefault<T,TBe>
 		:
 		Unard<T>

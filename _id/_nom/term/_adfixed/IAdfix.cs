@@ -9,4 +9,5 @@ namespace nilnul.obj._id._nom.term._adfixed
 	class IAdfix
 	{
 	}
+
 }

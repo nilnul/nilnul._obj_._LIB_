@@ -11,6 +11,6 @@ namespace nilnul.obj.op_._unary_.par_
 		nilnul.obj._op_.RetI<TRet>, 
 		nilnul.obj.op_._unary_.ParI<TPar>
 	{
-		TRet op(TPar par);
+		TRet op(TPar x);
 	}
 }

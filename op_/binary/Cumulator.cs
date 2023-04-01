@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.op_.binary
 {
-	public interface ICumulator { }
 	public interface ICumulator<out T>
 		:ICumulator
 

@@ -13,6 +13,9 @@ namespace nilnul.obj.stream_._slider
 	/// vs <see cref="IEnumerator{T}"/>, which
 	///		1) has to move first to get a value, while <see cref="ISkim"/> already has a val set before any moving
 	///		2) may end, while <see cref="ISkim"/> would never end.
+	///	alias:
+	///		skim
+	///		cursor
 	public interface ISkim { }
 	public interface ISkim<T>:ISkim { }
 	/// <summary>

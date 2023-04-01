@@ -29,6 +29,8 @@ namespace nilnul._obj.typ_.nilable_.unprimable_.singleton_
 The thread safety mode of a Lazy<T> instance that is initialized with this constructor is LazyThreadSafetyMode.ExecutionAndPublication if isThreadSafe is true; otherwise, the mode is LazyThreadSafetyMode.None. 		  
 		  **********/
 
+///we intentionally removed static construtor, so this is different with <see cref="Singleton{T}"/>, where static constructor is not removed; Then we can have two methodology at hands for trial;		
+
 		static public  YourClass Instance
 		{
 			get

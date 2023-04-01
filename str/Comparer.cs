@@ -10,6 +10,11 @@ namespace nilnul.obj.str
 	/// 
 	/// </summary>
 	/// <typeparam name="TElement"></typeparam>
+	///
+	[Obsolete(
+		//nameof(Comp)
+		"to avoid collision iwth built in type"
+	)] 
 	public class Comparer<TElement>
 		: ComparerI<TElement>, ComparerOfEnumerableI<TElement>
 	{

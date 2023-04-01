@@ -15,6 +15,8 @@ namespace nilnul.obj.co_
 	/// alias:
 	///		duo
 	///		sametype
+	///
+	[Obsolete()]
 	public interface IDuo<T>:ICo<T,T>
 	{
 	}

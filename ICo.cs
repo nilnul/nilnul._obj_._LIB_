@@ -1,17 +1,17 @@
 ﻿namespace nilnul.obj
 {
+	/// each component is of the same type:<typeparamref name="T"/>
 	/// <summary>
 	/// two items of the same type, but might be of different subtype.
 	/// </summary>
-	public interface ICo {
+	/// vs:
+	///		<see cref="obj.IDuo"/>
+	public interface ICo:obj.vec_.ICo
+		,
+		IDuo /// co shall be shorter, that's why we create a new type for;
+	{
 
 	}
 
-	/// <summary>
-	/// the second type is not defined.
-	/// according to nilnul rule for marker interfaces, generice ones shall inherit from less generice ones. Hence we have ICo{T,T1} herits ICo{T}.
-	/// for same typed typPars, <see cref="co_.IDuo{T}"/>
-	/// </summary>
-	/// <typeparam name="T"></typeparam>
-	public interface ICo<T>:ICo { }
+	
 }

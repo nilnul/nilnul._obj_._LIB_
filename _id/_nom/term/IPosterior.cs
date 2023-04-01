@@ -8,7 +8,11 @@
 	/// <remarks>
 	///
 	/// </remarks>
-	class IPosterior
+	public interface IPosterior
+		:
+		extered_.IRear
+		,
+		IExteriored
 	{
 	}
 }

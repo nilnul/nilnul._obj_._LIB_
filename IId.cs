@@ -18,5 +18,4 @@ namespace nilnul.obj
 	public interface IId:IIdenty
 	{
 	}
-	/// 
 }

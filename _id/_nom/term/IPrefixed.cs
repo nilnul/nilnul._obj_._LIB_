@@ -3,7 +3,7 @@
 	/// <summary>
 	/// apply the prefix <see cref="term._adfixed.adfix_.prefix_"/> for once.
 	/// </summary>
-	class IPrefixed
+	public interface IPrefixed
 	{
 
 	}

@@ -3,7 +3,10 @@
 	/// <summary>
 	/// <see cref="IPrior"/>, or either <see cref="IPosterior"/>
 	/// </summary>
-	class IExteriored
+	/// alias:
+	///		exterior
+	///		exter
+	public interface IExteriored
 	{
 
 	}

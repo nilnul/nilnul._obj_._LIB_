@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.obj_
 {
 	/// <summary>
-	
+
 	/// </summary>
 	public class Nul
 	{

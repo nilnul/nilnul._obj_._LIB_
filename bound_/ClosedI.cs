@@ -14,6 +14,7 @@ namespace nilnul.obj.bound_
 	///		Range
 	///		bounding
 	///			-ing means being achieved, implying it's closed
+	///		gamut
 	/// </remarks>
 	public interface ICLosed
 	{

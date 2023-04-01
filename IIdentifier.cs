@@ -1,10 +1,10 @@
 ﻿namespace nilnul.obj
 {
-	/// defer this to <see cref="nilnul.txt"/> or <see cref="nilnul.dev"/> where the use case is available, and thus implementable with the context/application in mind.
 	/// <summary>
-	/// 
+	/// extend <see cref="IIdenty"/> to accomodate such as:
+	///		nilnul1.txt3.1.2.3
 	/// </summary>
-	class IIdentifier
+	public interface IIdentifier
 	{
 
 	}

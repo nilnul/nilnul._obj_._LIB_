@@ -12,7 +12,8 @@ namespace nilnul.obj._id._nom.term
 	/// eg:
 	/// Abc___
 	/// </summary>
-	class IPosteriorsed
+	public interface IPosteriorsed
+
 	{
 
 	}

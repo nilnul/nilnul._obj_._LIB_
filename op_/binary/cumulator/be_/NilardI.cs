@@ -13,7 +13,8 @@ namespace nilnul.obj.op_.binary.cumulator.be_
 	/// <typeparam name="T"></typeparam>
 	/// <remarks>
 	/// </remarks>
-	/// annihilator 
+	/// alias:
+	///		annihilator 
 	public interface NilardableI<T>
 		:nilnul.obj.op_.binary.cumulator.Be_cumulatorGeneriI<T>
 		,

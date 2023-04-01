@@ -6,6 +6,19 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.stream
 {
+	/// <summary>
+	/// for a stream, take the first n items, and n traverses from 0,1,2,3, ;note: here at first the first 0 items are taken;
+	/// eg:
+	///		for 0,1,2,3,...
+	///		we get:
+	///			[]
+	///			[0]
+	///			[0,1]
+	///			[0,1,2]
+	///	that is get a stream of str;
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// <typeparam name="TStream"></typeparam>
 	public class Stock<T, TStream>
 		: nilnul.obj.stream_.SliderA<List<T>>
 		,

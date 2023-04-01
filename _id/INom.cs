@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj._id
 {
+	/// 
 	/// <summary>
 	/// as id is a word with a letter starting, <see cref="INom"/> is at least one letter long.
+	/// eg:
+	///		a in a1
+	///		_ in _1
 	/// </summary>
 	/// alias:
 	///		nub
@@ -15,6 +19,8 @@ namespace nilnul.obj._id
 	///	vs:
 	///		name
 	///			used locally, dynamically meaning different things at different place.
+	///
+	/// https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
 	public interface INom
 	{
 	}

@@ -15,6 +15,8 @@ namespace nilnul.obj
 	/// alias:
 	///		id
 	///		phrase
+	///	<see cref="IWord"/>
+	///	<seealso cref="IId"/>
 	///
 	public interface ILex
 	{
