@@ -22,6 +22,9 @@ namespace nilnul.obj
 	///		diff: the type of each component varies in rec, same in <see cref="nameof(IStr)"/>
 	///		rec can be converted to a str{supper common type}, each component of which is of the common super type.
 	/// </remarks>
+	/// <see cref="nilnul.IObjs"/>
+	/// vs:
+	///		<see cref="nilnul.objs_.IStr"/>, whileas here we regard <see cref="nilnul.obj"/> as a type, not instance, and <see cref="obj.IStr"/> is a str of that type;
 
 	public interface IStr:
 		IRec

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.obj
 {
 
-	[Obsolete("wrong position of TRet")]
+	[Obsolete(nameof(OfI1<TRet,TArg>) + " is preferred; wrong position of TRet")]
 	public interface OfI<in TArg, out TRet>:
 		IOf
 		//,
@@ -15,6 +15,8 @@ namespace nilnul.obj
 	{
 		TRet of(TArg arg);
 	}
+
+
 
 	[Obsolete("wrong position of TRet")]
 	public interface OfI<in TArg> : _of.ParGenericI<TArg, object>

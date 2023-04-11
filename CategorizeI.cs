@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj
 {
+	[Obsolete(nameof(ICategorize))]
 	public interface _CategorizeI
 	{
 	}
+	
+
 	public interface _CategorizeI<T>:_CategorizeI {
 
 	}

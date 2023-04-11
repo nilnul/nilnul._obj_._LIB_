@@ -3,40 +3,43 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using nilnul.obj._vow_;
 
 namespace nilnul.obj.vow
 {
 	/// <summary>
 	/// vowed objects.'cuz vow is generally derived from be, so vowed is infact been. we get "en" from been; and en is different from but mnemorically related to "ed" in op-ed objects.
 	/// </summary>
-	///
-
-	public interface EeI<T>:_ee_.EeI<T>
-	{
-	}
-
-
 
 	[Obsolete()]
-	public class Ee<T, TVow>
+	public class En<T>
 		:
-		nilnul.obj.Box<T>
-		,
-		EeI<T>
-		where TVow : nilnul.obj.VowI<T>
+		EnA<T>
 	{
-		public Ee(T val,TVow vow) : base( val)
+		public En(  VowI<T> vow, T val)
+			:base(val)
 		{
-			vow.vow(boxed);
-		}
-
-		public T ee => boxed;
-
-		static public implicit operator T(Ee<T, TVow> ee)
-		{
-			return ee.ee;
+			vow.vow(val);
 		}
 	}
+
+	[Obsolete()]
+
+	public class En<T, TVow>
+		: En<T>
+		where TVow : nilnul.obj.VowI<T>, new()
+	{
+		public En(T val) : base( nilnul.obj_.Singleton<TVow>.Instance, val)
+		{
+		}
+
+		static public implicit operator T(En<T, TVow> en) {
+			return en.en;
+		}
+	}
+
+	
+
 
 
 }

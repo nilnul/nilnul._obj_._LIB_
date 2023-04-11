@@ -15,5 +15,10 @@ namespace nilnul.obj.str.of_
 				yield return member;
 			}
 		}
+		static public IEnumerable<T> _RepeatByEnum_1nonneg<T>(T member, int count) {
+
+			return Enumerable.Repeat(member, count);
+		}
+
 	}
 }

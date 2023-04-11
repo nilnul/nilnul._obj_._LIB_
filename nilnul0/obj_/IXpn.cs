@@ -10,5 +10,9 @@
 	/// <remarks>
 	/// for nilnul.obj_.Vowee, the complement is nilnul.obj_.Xpn
 	/// </remarks>
+	/// alias:
+	///		throwable;
+	///		xpn
+	///		
 	public interface IXpn { }
 }

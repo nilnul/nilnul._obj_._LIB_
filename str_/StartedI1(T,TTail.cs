@@ -8,8 +8,6 @@ using System.Threading.Tasks;
 namespace nilnul.obj.str_
 {
 
-	public interface IStarted { }
-	public interface IStarted<T> : IStarted { }
 
 	public interface IStarted<T,TTail> : IStarted<T> { }
 

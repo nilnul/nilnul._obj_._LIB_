@@ -5,27 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.obj.str_
+namespace nilnul.objs_
 {
 
 	/// <summary>
 	/// 
 	/// </summary>
-	/// alias:
-	///		started
-	///		staged
-	///		staked
-	///		stuffed
-	///		
-	public interface IStarted:nilnul.obj.IStr {
+	/// 
+	public interface IStarted:nilnul.IObjs {
 
 	}
 
 	public interface IStarted<T> : IStarted { }
 
-
-
-
+	public interface IStarted<T, TTail>
+		:IStarted<T>
+		where TTail: nilnul.ObjsI3<T>
+	 {
+	}
 
 
 

@@ -12,6 +12,9 @@ namespace nilnul.obj
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	/// <seealso cref="nameof(nilnul.obj.str.be_.distinct.vow.Ed>)"/>
+	/// alias:
+	///		sortie
+	///		suc
 	///
 	public interface ISortie : _sortie_.BlankI
 		,

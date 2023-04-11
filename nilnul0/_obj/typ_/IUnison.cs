@@ -43,6 +43,7 @@ return result;
 	///		void
 	///		vod
 	///		vnit
+	///		eg
 	/// 
 	public interface IUnison { }
 }

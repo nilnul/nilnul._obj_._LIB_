@@ -21,7 +21,7 @@ namespace nilnul._obj.typ_.nilable_.unprimable_
 		//where YourClass:class
 	{
 		
-		static private readonly YourClass _Instance
+		static public readonly YourClass Instance
 		 //;
 		 = new YourClass();
 
@@ -44,15 +44,15 @@ namespace nilnul._obj.typ_.nilable_.unprimable_
 		//}
 
 
-		static public YourClass Instance
-		{
-			get
-			{
-				return _Instance;
-				// _Instance = _Instance ?? new YourClass();// some one online suggested this, but "error: ?? cannot be appplied on YourClass and YourClass"
-				//return _Instance;
-			}
-		}
+		//static public YourClass Instance
+		//{
+		//	get
+		//	{
+		//		return _Instance;
+		//		// _Instance = _Instance ?? new YourClass();// some one online suggested this, but "error: ?? cannot be appplied on YourClass and YourClass"
+		//		//return _Instance;
+		//	}
+		//}
 
 	}
 }
