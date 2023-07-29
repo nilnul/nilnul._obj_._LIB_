@@ -3,6 +3,9 @@
 	/// <summary>
 	/// such as static class;
 	/// </summary>
+	/// <remarks>
+	/// 
+	/// </remarks>
 	/// <seealso cref="IBot"/>
 	public interface INoninstantiable { }
 }

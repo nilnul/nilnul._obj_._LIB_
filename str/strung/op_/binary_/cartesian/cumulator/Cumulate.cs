@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.str.strung.op_.binary_.cartesian.cumulator
 {
+
 	public class Cumulate<T>
 		:
 		nilnul.obj.op_.binary.cumulator.cumulate_.CumulatorDefault<
@@ -27,6 +28,13 @@ namespace nilnul.obj.str.strung.op_.binary_.cartesian.cumulator
 			}
 		}
 
+		/// <summary>
+		/// eg:
+		///		( [a,b])  ([c,d]) ([e,f])
+		///		= (a,c,e) ,(a,c,f),(a,d,e),(a,d,f), (b,c,e), (b,c,f) ,(b,d,e), (b,d,f)
+		/// </summary>
+		/// <param name="pars1"></param>
+		/// <returns></returns>
 		public IEnumerable<IEnumerable<T>> cumulate_each2monos(  IEnumerable<IEnumerable<T>> pars1)
 		{
 			return base.cumulate(
@@ -35,6 +43,7 @@ namespace nilnul.obj.str.strung.op_.binary_.cartesian.cumulator
 				)
 			);
 		}
+
 
 		public IEnumerable<IEnumerable<T>> cumulate_each2monos(params  IEnumerable<T>[] pars1)
 		{

@@ -7,13 +7,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.objs_
 {
-
 	public interface EmptyI:nilnul.ObjsI
 	{
-
 	}
-
-	
-
-
 }

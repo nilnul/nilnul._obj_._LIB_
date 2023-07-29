@@ -6,7 +6,10 @@
 	/// <typeparam name="T"></typeparam>
 	public interface SkimI<T> :
 		
+		nilnul.obj.stream_._slider.SkimI<T>
+		,
 		nilnul.obj.stream_._slider.CursorI<T>
+
 		
 	{
 		

@@ -9,8 +9,12 @@ namespace nilnul._obj.typ.re_
 	/// <summary>
 	/// not self. parent, or the parent of ancestor.
 	/// </summary>
-	/// 
+	/// <remarks>
+	/// the 1st is the ancestor of the 2nd;
+	/// </remarks>
 	class Ancestor
 	{
+		const string SYMBOL = ">";
+
 	}
 }

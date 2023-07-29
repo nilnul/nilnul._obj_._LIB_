@@ -11,8 +11,8 @@ namespace nilnul.obj.op_
 		_nary_.Ret<T>
 		,
 		NaryI<T>
-		,
-		op_.of_.VecI<T>
+		//,
+		//op_.of_.VecI<T>
 	{
 		public Nary(T ret) : base(ret)
 		{
@@ -27,13 +27,20 @@ namespace nilnul.obj.op_
 			//throw new NotImplementedException();
 		}
 	}
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <typeparam name="T"></typeparam>
+	/// alias:
+	///		nary_.ByFunc
 	public class NaryOnFunc<T>
 		:
 		nilnul.obj.Box1<Func< T>>,
 
 		NaryI<T>
-		,
-		op_.of_.VecI<T>
+		//,
+		//op_.of_.VecI<T>
 	{
 		public NaryOnFunc(Func<T> val) : base(val)
 		{

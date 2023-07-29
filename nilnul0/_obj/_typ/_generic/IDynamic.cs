@@ -8,5 +8,6 @@ namespace nilnul._obj._typ._generic
 {
 	class IDynamic
 	{
+
 	}
 }

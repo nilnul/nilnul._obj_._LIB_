@@ -20,7 +20,7 @@ namespace nilnul.obj.op_
 	/// <seealso cref="nameof(nilnul.obj.OfI)"/>
 	/// </remarks>
 	///
-
+	[Obsolete(nameof(obj.ITo))]
 	public interface ToI<  out TDst, in TThisAsSrc>
 		:ITo< TDst, TThisAsSrc>
 		,
@@ -30,6 +30,7 @@ namespace nilnul.obj.op_
 
 	}
 
+	[Obsolete(nameof(obj.ITo))]
 	public interface ToI<out TDst>:ToI<TDst, object>
 	{
 

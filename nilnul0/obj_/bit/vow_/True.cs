@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.obj_.bit.vow_
 {
 
-	
+
 	//public class True<TXpn> :
 	//	nilnul.obj_.Xpn<TXpn>
 	//	,
@@ -17,7 +17,7 @@ namespace nilnul.obj_.bit.vow_
 	//	public True(TXpn val) : base(val)
 	//	{
 	//	}
-		
+
 	//	public void vow(bool obj)
 	//	{
 	//		if (!obj)
@@ -26,6 +26,7 @@ namespace nilnul.obj_.bit.vow_
 	//		};
 	//	}
 	//}
+	[Obsolete(nameof(nilnul.bit.vow_.True))]
 
 	public class True : True<Exception>
 	{

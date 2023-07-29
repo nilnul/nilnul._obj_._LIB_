@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.re_
 {
-
+	static public class _EqX
+	{
+		/// <summary>
+		/// 
+		/// </summary>
+		/// vs:
+		///		<see cref="_EquivX.SYMBOL"/>
+		public const char SYMBOL = '=';
+	}
 	public class Eq<T>
 		: nilnul.obj.Box1<
 			IEqualityComparer<T>

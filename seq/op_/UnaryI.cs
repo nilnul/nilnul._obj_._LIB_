@@ -8,6 +8,8 @@ namespace nilnul.obj.seq.op_
 {
 	public interface UnaryI<T>
 		:nilnul.obj.op_._unary_.retPar_.ClosedI<IEnumerable<T>>
+		,
+		nilnul.obj.op_.UnaryI<IEnumerable<T>>
 	{
 
 	}

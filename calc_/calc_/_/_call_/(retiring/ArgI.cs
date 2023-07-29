@@ -2,10 +2,12 @@
 
 namespace nilnul.obj._call_
 {
-	[Obsolete()]
+	[Obsolete(nameof(calc_._unary.ArgI<T>))]
 
 	public interface ArgI<T>
+		:calc_._unary.ArgI<T>
+
 	{
-		T arg { get; }
+		//T arg { get; }
 	}
 }

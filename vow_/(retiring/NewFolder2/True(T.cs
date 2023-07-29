@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.vow_
 {
+	[Obsolete(nameof(bit.vow_.True<TException>))]
 	public class True<TException> : 
 		
 		VowI<bool>

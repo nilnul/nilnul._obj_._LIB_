@@ -12,7 +12,9 @@ namespace nilnul.obj_.xpn_
 	/// <remarks>
 	/// If a function is complex enough, any exception can happen, now matter of the returned type T. so ISpace can be the subtype of any type.
 	/// </remarks>
-	interface ISpace
+	interface ISpace:IXpn
 	{
 	}
+
+
 }

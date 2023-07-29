@@ -9,10 +9,15 @@ namespace nilnul.obj.expr_
 {
 
 	/// <summary>
+	/// the type info is provided here. expose those info to any interface that needs those info;
 	/// <see cref="expr_.typed_.generi_.Var{T}"/>
 	/// </summary>
+	/// <remarks>
+	///
+	/// </remarks>
 	/// <typeparam name="T"></typeparam>
 
+	[Obsolete(nameof(expr_.typed_.generi_.Var<T>))]
 	public class Var_sys<T> : _var.untyped.be.vow.Ee<T>
 		,
 		nilnul.obj.expr_.IVar
@@ -20,6 +25,8 @@ namespace nilnul.obj.expr_
 		IEquatable<Var_sys<T>>
 		,
 		ExprI_sys<T>
+		,
+		expr_.var_.ITyped
 		
 
 	{
@@ -30,13 +37,13 @@ namespace nilnul.obj.expr_
 
 		}
 		public Var_sys():this(
-			Expression.Parameter(typeof(bool) )
+			Expression.Parameter(typeof(T) )
 		)
 		{
 
 		}
 		public Var_sys(string s):this(
-			Expression.Parameter(typeof(bool), s)
+			Expression.Parameter(typeof(T), s)
 		)
 		{
 

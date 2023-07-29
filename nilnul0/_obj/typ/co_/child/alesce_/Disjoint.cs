@@ -8,10 +8,16 @@ namespace nilnul._obj.typ.co_.child.alesce_
 {
 
 	/// <summary>
-	/// as a subtype of P, this is disjoint with another subtype C.
+	/// Supposing X inherits this interface.
+	/// as a subtype of P, X is disjoint with another subtype C.
 	/// </summary>
-	/// <typeparam name="P"></typeparam>
-	/// <typeparam name="C"></typeparam>
+	/// <remarks>
+	/// C is the child of P;
+	/// X is the child of P;
+	/// C and X are disjoint;
+	/// </remarks>
+	/// <typeparam name="P">parent</typeparam>
+	/// <typeparam name="C">child</typeparam>
 	public interface IDisjoint<P,C>
 		:
 		typ.calc_.unary_.INot<C>

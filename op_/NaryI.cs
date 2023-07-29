@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.op_
 {
-	public interface NaryI<T>:_nulary_.RetI<T>, _nary_.BlankI
+	public interface NaryI<out T>
+		:
+		//_nulary_.RetI<T>
+		//, _nary_.BlankI
+		//,
+		obj.of_.OfEmptyI<T>
+		,
+		INary<T>
 
 	{
 	}

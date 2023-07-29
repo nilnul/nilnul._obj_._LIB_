@@ -12,6 +12,7 @@ namespace nilnul.obj._matrix
 	/// we have the 0th or primary dimension, which is 2 in length; it's called primary in that it's about the overrall big structure.
 	/// and the auxilary dimension, which is 3 in length, as it's about a smaller component
 	/// Here we avoid row or col in order to rid off ambiguity.
+	/// this matrix is [2,3], where '2' appears first|front, and describes the main strucutre.
 	/// 
 	/// </summary>
 	/// <remarks>

@@ -7,6 +7,7 @@ namespace nilnul.obj
 {
 
 
+	[Obsolete(nameof(of_.ITernary))]
 	public interface OpI<out TRet,in TPar,in TPar1,in TPar2>
 		:IOp<TRet,TPar,TPar1,TPar2>
 	{

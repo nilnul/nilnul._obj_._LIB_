@@ -7,6 +7,7 @@ using System.Text;
 namespace nilnul.obj.calc_._binary
 {
 
+	public interface IOpArgs { }
 
 	/// <summary>
 	/// 
@@ -23,15 +24,16 @@ namespace nilnul.obj.calc_._binary
 
 
 
-
 	}
-/// <summary>
-/// 
-/// </summary>
-/// <typeparam name="TOp">the operator</typeparam>
-/// 
-public class OpArgArg1<TOp,TArg,TArg1>
-		: nilnul.obj.calc_._unary.OpArg<TOp,TArg>
+
+
+	/// <summary>
+	/// 
+	/// </summary>
+	/// <typeparam name="TOp">the operator</typeparam>
+	/// 
+	public class OpArgArg1<TOp, TArg, TArg1>
+			: nilnul.obj.calc_._unary.OpArg<TOp, TArg>
 
 	{
 		private TArg1 _arg1;
@@ -41,14 +43,14 @@ public class OpArgArg1<TOp,TArg,TArg1>
 			get { return _arg1; }
 			set { _arg1 = value; }
 		}
-		public OpArgArg1(TOp op,TArg arg,TArg1 arg1)
-			:base(op,arg)
+		public OpArgArg1(TOp op, TArg arg, TArg1 arg1)
+			: base(op, arg)
 		{
 			this._arg1 = arg1;
 
 		}
-		
-		
-		
+
+
+
 	}
 }

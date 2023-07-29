@@ -6,7 +6,7 @@ namespace nilnul.obj.stream._subsume_
 		
 	{
 		/// <summary>
-		/// the current of the underlying slider, which has been cumulated;
+		/// the current of the underlying stream, which has been cumulated;
 		/// </summary>
 		/// <remarks>
 		///

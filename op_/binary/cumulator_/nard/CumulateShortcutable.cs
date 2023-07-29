@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.obj.op_.binary.cumulator_.nard
 {
 	/// <summary>
-	/// <seealso cref="obj.algebra_.pargoid_.magma_.semigrp_.monoid"/>
+	/// <seealso cref="obj.abgebra_.pargoid_.magma_.semigrp_.monoid"/>
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	public class CumulateShortcutable<T> :

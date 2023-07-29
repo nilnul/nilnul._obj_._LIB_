@@ -7,6 +7,7 @@
 	/// alias:
 	///		cascade
 	///		collapse
+	///	vs:<see cref="stream.ISubsume"/>, which is a stream resulted from this;
 	public interface ICascade { }
 
 

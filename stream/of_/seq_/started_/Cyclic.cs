@@ -52,7 +52,9 @@ namespace nilnul.obj.stream.of_.seq_.started_
 
 			if (!_enumerator.MoveNext())
 			{
-				_enumerator.Reset();
+				_enumerator = this.boxed.GetEnumerator();
+				//_enumerator.Reset(); //will throw : System.NotSupportedException: 'Specified method is not supported.'
+
 				_enumerator.MoveNext();
 
 			}

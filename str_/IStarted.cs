@@ -9,8 +9,12 @@ namespace nilnul.obj.str_
 {
 
 	/// <summary>
-	/// 
+	/// a finite dwelt sequence;
 	/// </summary>
+	/// <remarks>
+	/// useful in assuming parameters like in: _Dft_0started;
+	/// This is different from <see cref="seq_.head"/>
+	/// </remarks>
 	/// alias:
 	///		started
 	///		staged

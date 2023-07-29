@@ -22,9 +22,20 @@ namespace nilnul.obj.dict_
 
 		}
 
+		public Poll():this(EqualityComparer<T>.Default)
+		{
+				
+		}
+
 		public Poll(IDictionary<T,bool> dict, IEqualityComparer<T> eq) :base(dict,eq)
 		{
 
 		}
+		public Poll(IDictionary<T,bool> dict ) :this(dict, EqualityComparer < T >.Default)
+		{
+
+		}
+
+
 	}
 }

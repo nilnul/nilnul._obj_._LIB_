@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.obj.op_.binary
+namespace nilnul.obj.of_.binary
 {
 	public class Converse<T>
 		: nilnul.obj.Box1<BinaryI<T>>

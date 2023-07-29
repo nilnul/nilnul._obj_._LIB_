@@ -26,11 +26,15 @@
 	/// <seealso cref="nameof(ToI)"/>
 	/// In "Of", instead of subtyping <see cref="nameof(nilnul.IObj)"/>, we can create no type which requires verification by throw exception for invalid arguments, rather we can use static method with "_assumeing" to assume the argument must satisfy some conditions.
 	/// </remarks>
-	///
+	/// alias:
+	///		<see cref="obj.IConstructor"/> or ICtor
+	///		create <see cref="obj.ICreate"/>
+	///		
+	///		
 	//[Obsolete("should be in namespace: "+ nameof(nilnul.obj.op_))]
 	public interface IOf
-		:
-		op_.IOf
+		//:
+		//op_.IOf
 	//,
 	//IOp<object>
 	//,
@@ -41,11 +45,15 @@
 
 	}
 
+	/// <summary>
+	/// not (nary|nonary); but only specify the return type. the input is not defined here.
+	/// </summary>
+	/// <typeparam name="T"> the returned type</typeparam>
 	public interface IOf1<out T>
 		:
 		IOf
-		,
-		nilnul.obj.IOp<T>
+		//,
+		//nilnul.obj.IOp<T>
 	{
 
 	}

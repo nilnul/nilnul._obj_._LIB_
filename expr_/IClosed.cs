@@ -7,11 +7,15 @@ namespace nilnul.obj.expr_
 {
 
 	/// <summary>
+	/// subexpr, including the expr itself, any var, any interim input/output, is of the same type
+	/// </summary>
+	/// <remarks>
 	/// closed form in that the var, the expr are of the same type parameter.
 	/// vs: <see cref="nameof(System.Linq.Expressions.Expression)"/>
 	///		Expression is of various type parameter, hence closed if we abstract the type parameter as an object type.
-	/// </summary>
-	public  interface IClosed
+	///
+	/// </remarks>
+	public  interface IClosed:capsule_.ISubexprSameType
 	{
 	}
 
@@ -20,7 +24,7 @@ namespace nilnul.obj.expr_
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	[Obsolete(nameof(expr_.typed_.generi_.closed))]
-	public interface IClosed<out T> : IClosed {
+	public interface IClosed< T> : IClosed , capsule_.ISubexprSameType<T>{
 
 	}
 

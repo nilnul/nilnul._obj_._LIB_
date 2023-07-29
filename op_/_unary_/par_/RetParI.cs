@@ -10,7 +10,9 @@ namespace nilnul.obj.op_._unary_
 	public interface RetParI<out TRet, in TPar>:
 		nilnul.obj._op.RetI<TRet>, 
 		nilnul.obj.op_._unary_.ParI<TPar>
+		,
+		obj.of_.OfSingleI<TRet,TPar>
 	{
-		TRet op(TPar par);
+		//TRet op(TPar par);
 	}
 }

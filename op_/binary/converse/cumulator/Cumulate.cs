@@ -7,7 +7,14 @@ using System.Threading.Tasks;
 namespace nilnul.obj.op_.binary.converse.cumulator
 {
 	/// <summary>
-	/// imaging the 
+	/// imaging the str prepending:
+	///		for a,b,c
+	///			we get ba,c
+	///				then cba
+	///		for ab,c,def
+	///			we get cab,def
+	///				defcab
+	///	it's like reverse the str, and then apply the unconversed operator: the concat;
 	/// </summary>
 	/// <typeparam name="T"></typeparam>
 	public class Cumulate<T> :

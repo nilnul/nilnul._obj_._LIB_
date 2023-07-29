@@ -39,7 +39,7 @@ namespace nilnul.obj.op_.binary.co.be_._distributive
 		/// <summary>
 		/// 
 		/// </summary>
-		/// <param name="plus">follow the convention in <see cref="obj.algebra_.cobiop_.ISemiring"/> , putting additin first, multiplication second</param>
+		/// <param name="plus">follow the convention in <see cref="obj.abgebra_.cobiop_.ISemiring"/> , putting additin first, multiplication second</param>
 		/// <param name="multi"></param>
 		/// <param name="par"></param>
 		/// <param name="par1"></param>

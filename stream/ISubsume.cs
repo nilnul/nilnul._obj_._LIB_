@@ -2,7 +2,7 @@
 {
 
 	/// <summary>
-	/// at beginning, there is no current value; we must call next to get one;
+	/// at beginning, there is no current value; we must call next to get one; So <see cref="stream_.slider.subsume_"/>
 	/// </summary>
 	/// vs:
 	///		<see cref="IStock"/>, but this cannot tackle empty str; So we must call next to get the first singleton str;

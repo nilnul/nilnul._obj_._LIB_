@@ -6,15 +6,30 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.op_
 {
-	public interface ITernary
+	public interface ITernary:obj.IOp
+		,
+		obj.of_.IOfTriple
 
 	{
 	}
+
+	public interface ITernary<T>
+		:
+		obj.of_.vec_.IOfTriple<T,T>
+		,
+		ITernary
+
+	{
+	}
+
 	public interface TernaryI<T>
+		:
+		obj.of_.vec_.OfTripleI<T,T>
 
 	{
-		T op(T x, T y, T z);
+		//T op(T x, T y, T z);
 	}
+
 
 
 }

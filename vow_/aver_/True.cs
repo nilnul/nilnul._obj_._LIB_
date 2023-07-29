@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.aver_
 {
+	[Obsolete(nameof(nilnul.bit.vow_.True))]
 	public class True : _aver_.AverI<bool>
 	{
 

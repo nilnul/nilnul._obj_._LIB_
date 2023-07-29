@@ -9,7 +9,7 @@ namespace nilnul.obj.calc_
 	public  interface UnaryI<R,TArg, TOp>
 		:nilnul.obj._call_.OpI1<TOp>
 		,
-		nilnul.obj._call_.ArgI<TArg>
+		nilnul.obj.calc_._unary.ArgI<TArg>
 		,
 		CalcI<R>
 		where TOp: nilnul.obj.op_.UnaryI<R>

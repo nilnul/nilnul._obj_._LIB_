@@ -6,11 +6,13 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.expr_.call_._binary
 {
+	[Obsolete(nameof(obj.calc_._binary.Arg1<T>))]
 	public interface Arg1I<out T>
 	{
 		T arg1 { get; }
 	}
 
+	[Obsolete(nameof(obj.calc_._binary.Arg1<TArg>))]
 	public class Arg1<TArg> : Arg1I<TArg>
 
 	{

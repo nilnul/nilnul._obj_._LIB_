@@ -25,7 +25,7 @@ Example StringBuffer’s replace method…. replace(int start, int end, String s
 Polyadic
 A method that for some reason has more than 3, such as the String method ‘regionMatches’ which can be confusing to know which order the arugments come in (without looking at the doc)*/
 	/// <summary>
-	/// 
+	/// involving only <see cref="obj.IOp"/>s, recursively;
 	/// </summary>
 	public interface ICall {
 

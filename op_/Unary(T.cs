@@ -6,36 +6,13 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.op_
 {
-	public class Unary<TRet,T>
-		:
-		nilnul.obj.Box1<Func<T, TRet>>
-
-		,
-		op_.OfI1<TRet,T>
-		,
-		op_.ITo<TRet,T>
-		
-	{
-		public Unary(Func<T, TRet> val) : base(val)
-		{
-		}
-
-		public int arity =>1;
-
-		public TRet op(T par)
-		{
-			return boxed(par);
-			//throw new NotImplementedException();
-		}
-
-	}
 	public class Unary<T>
 		:
-		Unary<T,T>,
+		obj.of_.OfSingle<T,T>,
 
 		UnaryI<T>
-		,
-		op_.of_.VecI<T>
+		//,
+		//op_.of_.VecI<T>
 
 	{
 		public Unary(Func<T, T> val) : base(val)
@@ -46,7 +23,7 @@ namespace nilnul.obj.op_
 		{
 			obj.vec_._str._VowX._VowArity(1, vec);
 			return op(vec.First());
-			throw new NotImplementedException();
+			//throw new NotImplementedException();
 		}
 
 		

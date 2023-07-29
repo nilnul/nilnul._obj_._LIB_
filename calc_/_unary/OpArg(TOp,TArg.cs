@@ -7,6 +7,7 @@ using System.Text;
 namespace nilnul.obj.calc_._unary
 {
 
+	public interface IOpArg { }
 	/// <summary>
 	/// 
 	/// </summary>

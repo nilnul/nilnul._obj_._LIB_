@@ -10,7 +10,7 @@ namespace nilnul.obj.op_
 		
 		TernaryI<T>
 		,
-		op_.of_.VecI<T>
+		obj.of_.vec_.ScalaI<T>
 	{
 		
 

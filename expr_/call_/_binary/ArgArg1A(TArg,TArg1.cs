@@ -7,6 +7,7 @@ using System.Text;
 namespace nilnul.obj.expr_.call_._binary
 {
 
+	[Obsolete(nameof(obj.calc_._binary.ArgArg1I<T,T1>))]
 	public interface ArgArg1I<T,T1>
 		: _unary.ArgI<T>, Arg1I<T1>
 	{
@@ -18,6 +19,7 @@ namespace nilnul.obj.expr_.call_._binary
 	/// <typeparam name="TArg">the operator</typeparam>
 	/// 
 
+	[Obsolete(nameof(obj.calc_._binary.ArgArg1I<TArg,TArg1>))]
 	public   class ArgArg1<TArg,TArg1>
 		: _unary.Arg<TArg>
 		,

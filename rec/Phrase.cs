@@ -16,30 +16,30 @@ namespace nilnul.obj.rec
 
 	
 
-		static public string PhraseAsRow(IEnumerable<string> s)
+		static public string PhraseAsRow(IEnumerable<string> s, string sep=",")
 		{
 
-			return string.Join(",", s.Select(
+			return string.Join(sep, s.Select(
 				i => nilnul.txt.phrase_._AsCelX.AsCel(i)
 			));
 		}
 
-		static public string PhraseAsRow(IEnumerable<object> s)
+		static public string PhraseAsRow(IEnumerable<object> s, string sep=",")
 		{
 
-			return PhraseAsRow(s.Select(i=>i.ToString()));
+			return PhraseAsRow(s.Select(i=>i.ToString()),sep);
 		}
 
-		static public string PhraseAsRow(DataRow s)
+		static public string PhraseAsRow(DataRow s, string sep=",")
 		{
 
-			return PhraseAsRow(s.ItemArray);
+			return PhraseAsRow(s.ItemArray,  sep);
 		}
 
-		static public string PhraseAsRow(DataRowView s)
+		static public string PhraseAsRow(DataRowView s, string sep=",")
 		{
 
-			return PhraseAsRow(s.Row);
+			return PhraseAsRow(s.Row,  sep);
 		}
 
 

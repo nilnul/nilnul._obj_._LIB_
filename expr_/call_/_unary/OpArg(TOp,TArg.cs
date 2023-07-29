@@ -11,7 +11,10 @@ namespace nilnul.obj.expr_.call_._unary
 	/// 
 	/// </summary>
 	/// <typeparam name="TOp">the operator</typeparam>
-	/// 
+	///
+
+	[Obsolete(nameof(obj.calc_._unary.OpArgI<TOp,TArg>))]
+
 	public interface OpArgI<TOp, TArg>
 		: nilnul.obj.expr_.call_._nary.OpI<TOp>
 		,
@@ -30,6 +33,7 @@ namespace nilnul.obj.expr_.call_._unary
 	/// <typeparam name="TOp">the operator</typeparam>
 	/// 
 
+	[Obsolete(nameof(obj.calc_._unary.IOpArg))]
 	public   class OpArg<TOp,TArg>
 		: _nary.Op<TOp>
 	{

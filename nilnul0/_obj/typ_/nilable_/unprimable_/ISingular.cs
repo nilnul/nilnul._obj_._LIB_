@@ -29,7 +29,8 @@ namespace nilnul._obj.typ_.nilable_.unprimable_
 	///		<see cref="nilnul.obj.op_.unary.IRecur"/> might be <see cref="IUnprimable"/>, but not defaultable.As <see cref="obj.op_.unary.recur.Slider{TRecur, T, TOp}"/> is stateful.
 	///	<see cref="_obj.typ_.IUnison"/>	
 
-	public interface  ISingulable
+	public interface  ISingulable:
+		IUnprimable
 	{
 	}
 }

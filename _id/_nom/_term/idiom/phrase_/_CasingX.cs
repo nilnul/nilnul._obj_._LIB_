@@ -14,6 +14,7 @@ namespace nilnul.obj._id._nom._term.idiom.phrase_
 	/// note:
 	///		even for acronyms, the primary casing is all lower. and only in upper case would it be all upper.
 	/// </remarks>
+	/// <see cref="nilnul.txt"/>
 	static public class _CasingX
 	{
 		/// <summary>

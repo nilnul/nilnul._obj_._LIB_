@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace nilnul.obj.op_.binary.be_
 {
 	/// <summary>
-	/// 
+	/// x*x=x
 	/// </summary>
 	/// idempotent
 	/// absorptive

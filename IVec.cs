@@ -38,4 +38,9 @@
 	/// but for co, it's very often used, so we don't defer it to geometry.planar; rather, we define it at nilnul.num.real.
 	///
 	/// the above is one reason that co, tro, quod,quind,uno,nino, etc is placed not under the namspace "vec_", but directly under the domain name such as "nilnul.obj"
+	///
+
+
+
 }
+

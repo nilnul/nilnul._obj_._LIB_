@@ -12,7 +12,10 @@ namespace nilnul.obj.expr_.call_._binary
 	/// 
 	/// </summary>
 	/// <typeparam name="TOp">the operator</typeparam>
-	/// 
+	///
+
+	[Obsolete(nameof(obj.calc_._binary.OpArgArg1I<TOp,TArg,TArg1>))]
+
 	public interface OpArgArg1I<TOp, TArg, TArg1>
 		: nilnul.obj.expr_.call_._unary.OpArgI<TOp, TArg>
 		,
@@ -26,6 +29,7 @@ namespace nilnul.obj.expr_.call_._binary
 
 	}
 
+	[Obsolete(nameof(obj.calc_._binary.IOpArgs))]
 	public interface OpArgArg1I<TOp, TArg>
 		: 
 		
@@ -43,7 +47,9 @@ namespace nilnul.obj.expr_.call_._binary
 	/// 
 	/// </summary>
 	/// <typeparam name="TOp">the operator</typeparam>
-	/// 
+	///
+
+	[Obsolete(nameof(obj.calc_._binary.IOpArgs))]
 	public class OpArgArg1<TOp, TArg, TArg1>
 			: nilnul.obj.expr_.call_._unary.OpArg<TOp, TArg>
 
@@ -64,6 +70,7 @@ namespace nilnul.obj.expr_.call_._binary
 
 	}
 
+	[Obsolete(nameof(obj.calc_._binary.IOpArgs))]
 	public class OpArgArg1<TOp, TArg> : OpArgArg1<TOp, TArg, TArg>
 	{
 		public OpArgArg1(TOp op, TArg arg, TArg arg1) : base(op, arg, arg1)

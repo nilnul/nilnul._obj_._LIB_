@@ -11,6 +11,8 @@ namespace nilnul.obj._calc_
 	///
 	[Obsolete()]
 	public  interface BlankI
+		:
+		obj.ICalc
 	{
 	}
 }

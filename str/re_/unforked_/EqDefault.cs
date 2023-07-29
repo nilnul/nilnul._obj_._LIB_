@@ -4,31 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.objs.re_.align_
+namespace nilnul.obj.str.re_.unforked_
 {
 	/// <summary>
-	/// 
+	/// in it. 
 	/// </summary>
 	public class EqDefault<T,TEq> :
 		
-		nilnul.objs.re_.Align<T>
+		nilnul.obj.str.re_.Unforked<T>
 		where TEq:IEqualityComparer<T>,new()
 	{
-		public EqDefault() : base(
-			nilnul._obj.typ_.nilable_.unprimable_.Singleton<TEq>.Instance
-		)
+		public EqDefault() : base(nilnul._obj.typ_._UnisonX<TEq>.Unison)
 		{
 		}
+
 
 		static public EqDefault<T,TEq> Singleton
 		{
+			
 			get
 			{
-				return nilnul._obj.typ_.nilable_.unprimable_.Singleton<EqDefault<T,TEq>>.Instance;
+				return nilnul._obj.typ_._UnisonX<EqDefault<T,TEq> >.Unison;
 			}
 		}
-
-
 
 	}
 }

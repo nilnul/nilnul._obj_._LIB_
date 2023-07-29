@@ -12,18 +12,26 @@ namespace nilnul.obj.eq_
 		{
 			return object.Equals(x, y);
 		}
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="obj">
+		///not null or else nullReferenceException.
+		/// </param>
+		/// <returns></returns>
 		public int GetHashCode(T obj)
 		{
 			return obj.GetHashCode();
 		}
+
 		static public AsObj<T> Singleton
 		{
+			
 			get
 			{
-				return nilnul._obj.typ_.nilable_.unprimable_.Singleton<AsObj<T>>.Instance;
+				return nilnul._obj.typ_._UnisonX<AsObj<T>>.Unison;
 			}
 		}
-
 
 
 

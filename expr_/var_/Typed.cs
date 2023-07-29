@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace nilnul.obj._expr.untyped_.var_
 {
 
-	
+
 
 	[Obsolete()]
 	public class Typed<T> :

@@ -10,8 +10,8 @@ namespace nilnul.obj.op_
 		nilnul.obj.Box1<Func<T,T,T> >
 		,
 		BinaryI<T>
-		,
-		op_.of_.VecI<T>
+		//,
+		//op_.of_.VecI<T>
 	{
 		/// <summary>
 		/// 

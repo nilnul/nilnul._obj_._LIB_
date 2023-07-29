@@ -13,5 +13,9 @@ namespace nilnul.obj._func_
 		public static string DefaultAsTxt = DEFAULT.ToString();
 
 		public const string ForLamda = "=>";
+
+		public const string MORPH4TYPE = "=>";
+		public const string RETURN4INSTANCE = "->";
+
 	}
 }

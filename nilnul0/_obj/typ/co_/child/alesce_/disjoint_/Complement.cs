@@ -7,13 +7,18 @@ using System.Threading.Tasks;
 namespace nilnul._obj.typ.co_.child.alesce_.disjoint_
 {
 	/// <summary>
-	/// as a subtype of <typeparamref name="P"/>, this is a complement of another subtype <typeparamref name="C"/>
-	/// This is the 
+	/// Supposing X inherits this interface.
+	/// as a subtype of <typeparamref name="P"/>, X is a complement of another subtype <typeparamref name="C"/>
 	/// </summary>
 	/// <remarks>
+	/// C is the child of P;
+	/// X is the child of P;
+	/// C and X are disjoint;
+	/// C together with X   =   P;
+	/// </remarks>
 	/// alias:
 	///		comple
-	/// </remarks>
+	/// 
 	public interface IComplement<P,C>
 		:IDisjoint<P,C>
 		,

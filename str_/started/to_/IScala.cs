@@ -12,8 +12,12 @@ namespace nilnul.obj.str_.started.to_
 	/// alias:
 	///		single
 	///		scala
+	///		choose
+	///		choice
+	///			, as per axiom of choice
 	/// 
 	internal class IScala
+		:str.IScala
 	{
 	}
 }

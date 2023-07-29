@@ -3,7 +3,9 @@
 
 	public interface OpI1<out TOp>
 		:BlankI
-		where TOp:nilnul.obj._op_.BlankI
+		where TOp:
+			nilnul.obj.IOp
+			//nilnul.obj._op_.BlankI
 	{
 		TOp op { get;  }
 	}

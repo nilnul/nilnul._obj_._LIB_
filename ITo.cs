@@ -18,7 +18,9 @@ namespace nilnul.obj
 
 	//[Obsolete("wrong namespace")]
 	public interface ITo
-		:nilnul.obj.op_.ITo
+		:
+		nilnul.obj.of_.IOfSingle
+		//nilnul.obj.op_.ITo
 		//,
 		//nilnul.obj.IOp<, object>
 
@@ -26,14 +28,41 @@ namespace nilnul.obj
 
 	}
 
+	[Obsolete(nameof(ITo1<T>))]
 	public interface ITo<out T>
 		:
 		obj.ITo
 		,
-		nilnul.obj.IOp<T, object>
+		nilnul.obj.of_.IOfSingle<T>
+
+		//nilnul.obj.IOp<T, object>
 	{
 
 	}
+	public interface ITo1<in T>
+		:
+		obj.ITo
+		//,
+		//nilnul.obj.of_.IOfSingle<T>
+
+		//nilnul.obj.IOp<T, object>
+	{
+
+	}
+
+
+	public interface ITo<in T1,out T>
+		:
+		obj.ITo1<T1>
+		,
+		nilnul.obj.of_.IOfSingle<T,T1>
+
+		//nilnul.obj.IOp<T, object>
+	{
+
+	}
+
+
 
 	
 

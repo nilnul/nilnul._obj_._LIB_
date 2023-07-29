@@ -22,6 +22,8 @@ namespace nilnul.obj.expr_.typed_.generi_.call_
 		public Nary(TOp op) : base(op)
 		{
 		}
+
+
 		public TLiteral constant { get {
 				return op.op();
 		} }
@@ -56,7 +58,10 @@ namespace nilnul.obj.expr_.typed_.generi_.call_
 		public Nary(TLiteral val) : base( new nilnul.obj.op_.Nary<TLiteral>(val))
 		{
 		}
-
+		public Nary(ConstantExpression x):this( (TLiteral)x.Value)
+		{
+				
+		}
 		public Nary(nilnul.obj.op_.NaryI<TLiteral> op):base(op)
 		{
 

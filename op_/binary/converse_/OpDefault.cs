@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.obj.op_.binary.converse_
+namespace nilnul.obj.of_.binary.converse_
 {
 	public class OpDefault<T, TOp>
 		: Converse<T>
-		where TOp : nilnul.obj.op_.BinaryI<T>, new()
+		where TOp : BinaryI<T>, new()
 	{
-		public OpDefault() : base(nilnul._obj.typ_.nilable_.unprimable_.singleton_.ByLazy<TOp>.Instance)
+		public OpDefault() : base(nilnul._obj.typ_._UnisonX<TOp>.Unison)
 		{
 		}
 
@@ -20,7 +20,7 @@ namespace nilnul.obj.op_.binary.converse_
 		{
 			get
 			{
-				return nilnul._obj.typ_.nilable_.unprimable_.Singleton<OpDefault<T, TOp>>.Instance;
+				return nilnul._obj.typ_._UnisonX<OpDefault<T, TOp>>.Unison;
 			}
 		}
 

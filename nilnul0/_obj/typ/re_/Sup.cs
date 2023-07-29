@@ -11,5 +11,7 @@ namespace nilnul._obj.typ.re_
 	/// </summary>
 	class Sup
 	{
+		const string SYMBOL = ">=";
+
 	}
 }

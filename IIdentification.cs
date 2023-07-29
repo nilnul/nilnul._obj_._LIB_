@@ -7,7 +7,6 @@
 	/// </summary>
 	/// defer the implementation of this to <see cref="nilnul.txt"/> or <see cref="nilnul.dev"/> where the use case is available, and thus implementable with the context/application in mind.
 	///
-
 	public interface IIdentification {
 
 	}

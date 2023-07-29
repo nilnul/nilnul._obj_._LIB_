@@ -17,7 +17,7 @@ namespace nilnul.obj.expr_
 		ExprI4
 
 		,
-		nilnul.obj.CalcI
+		nilnul.obj.ICalc
 		
 	{
 		public Calc(ExprI4 val) : base(val)

@@ -18,4 +18,5 @@ namespace nilnul.obj.str.re_
 		///<see cref="obj.str.co_.IEquisize"/>
 	{
 	}
+
 }

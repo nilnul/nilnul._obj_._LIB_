@@ -6,6 +6,16 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj._categorize
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// vs:
+	///		genus
+	///		species
+	///		genre
+	///		phylum
+	///			used for life in biology;
+	///		taxon
 	internal class ICategory
 	{
 	}

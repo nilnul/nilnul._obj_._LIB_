@@ -28,7 +28,13 @@ namespace nilnul.obj
 	///			tuples => op => calc => var => expr => func
 	///		
 	/// </remarks>
-	///
+	/// <see cref="nilnul.obj.expr_.INonVariate"/>
+	/// <see cref="nilnul.obj.ICall"/>
+	///alias:
+	///		calculation
+	///		calculate
+	///		calcus
+	///		calc
 	//[Obsolete(nameof(nilnul.obj.expr_.ICalc))]
 	public interface ICalc
 	{

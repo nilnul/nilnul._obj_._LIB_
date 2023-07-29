@@ -28,9 +28,9 @@ namespace nilnul.obj._call_
 				_op=value;
 			}
 		}
-		public OpA(TOp op)
+		public OpA(TOp op_)
 		{
-			this.op = op;
+			this.op = op_;
 		}
 	}
 }

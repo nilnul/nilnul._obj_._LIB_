@@ -17,11 +17,17 @@
 	/// 	 this is not set, as multiple elements might recur. eg: in a table from Database
 	/// 	 this is not multi-set, as the order, not guranteed as it is, might make difference.
 	/// 	 This is the "a,b,c" in set {a,b,c} , in str [a,b,c], in sortie ⟨ a,b,c ⟩, withoug the enclosing fences.
+	///
+	/// objs is unscoped, so it might mean infinite such as <see cref="objs_.IInfinite"/>
 	/// 
 	/// </remarks>
 	/// imaging things litter on the floor, we don't know what's missed that might be somewhere else;
 	/// 
 	/// also we don;t know the order; but by Axiom of Choice (which is expected to apply to sets, but we here also apply it on this), we can choose one by one and establish order; So <see cref="nilnul.obj.IStr"/> is the default implementation of this; so later in consuming project that consumes the idea of this project, we might use Typs to represent Typ.Str in order to save some words;
+	///
+	/// vs:
+	///		<see cref="obj.IStr"/>, which encloses the <see cref="IObjs"/> with such as "[]"; without the enclosing fences, empty <see cref="IObjs"/> has to be "", which can be unphalable if we don't add the enclsing quotation mark. In short, "" without quotation mark is <see cref="IObjs"/>, [] is <see cref="obj.IStr"/>
+	///	
 	public interface IObjs
 		:obj.IStr
 	{

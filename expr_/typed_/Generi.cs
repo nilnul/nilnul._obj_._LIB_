@@ -14,7 +14,7 @@ using F = nilnul.obj.ExprI4;
 namespace nilnul.obj.expr_.typed_
 {
 	public interface IGeneri<out TRet>
-		:obj.IExpr
+		:obj.IExpr,obj.expr_.ITyped
 	{
 
 	}

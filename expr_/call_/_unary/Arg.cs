@@ -6,10 +6,15 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.expr_.call_._unary
 {
+
+	[Obsolete(nameof(obj.calc_._unary.ArgI<T>))]
+
 	public interface ArgI<out T>
 	{
 		T arg { get; }
 	}
+
+	[Obsolete(nameof(obj.calc_._unary.ArgI<TArg>))]
 	public  class Arg< TArg> :  ArgI<TArg>
 		
 	{

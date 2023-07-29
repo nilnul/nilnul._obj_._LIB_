@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.str
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// alias:
+	///		sample
+	///		scala
+	///			starts with "s" as sample does;
 	public interface IScala : tup.IScala { }
 
 	/// <summary>

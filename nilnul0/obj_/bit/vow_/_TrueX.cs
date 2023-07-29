@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj_.bit.vow_
 {
+	[Obsolete(nameof(nilnul.bit.vow_._TrueX))]
 	static public class _TrueX
 	{
 		static public void Vow<TXpn>(bool bit, TXpn xpn)

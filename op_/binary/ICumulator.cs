@@ -1,4 +1,4 @@
-﻿namespace nilnul.obj.op_.binary
+﻿namespace nilnul.obj.of_.binary
 {
 	//[Obsolete(nameof(ICrystalizer))]
 	public interface ICumulator { }

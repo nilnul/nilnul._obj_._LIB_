@@ -44,11 +44,25 @@ namespace nilnul.obj.expr_.typed_.generi_
 		public Closed(GeneriI<T> val) : base(val)
 		{
 		}
+		public Closed(Generi<T> val) : base(val)
+		{
+		}
+
 		public Closed(obj.ExprI4 expr) : this(new Generi<T>(expr))
 		{
 
+
+		}
+		public Closed(obj.Expr4 expr) : this(new Generi<T>(expr))
+		{
+
+
 		}
 
+		public Closed(System.Linq.Expressions.Expression expr) : this(new Generi<T>(expr))
+		{
+
+		}
 
 
 		public Ee<T> generi => this.ee.generi;

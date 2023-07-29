@@ -14,7 +14,8 @@ return result;
 	 */
 
 	/// <summary>
-	/// the class and the instance can be regarded as unascertainable;
+	/// the class and the instance can be regarded as unascertainable; the <see cref="ITyp"/> has only one inst;
+	/// some parameterized|generized types would degress from <see cref="IMultison"/>
 	/// in f#, this type is called unit; which is considered nilard/nilaryTuple
 	/// </summary>
 	/// <remarks>
@@ -24,6 +25,9 @@ return result;
 	/// </remarks>
 	/// <see cref="nilable_.unprimable_.ISingulable"/>
 	/// <see cref="Pointer"/>
+	/// vs:
+	///		sealed
+	///			in fact this is sealed in the sense that it cannot be more specific by a subtype;
 	/// alias:
 	///		unison
 	///			the type and the instance are in unison, as union struct type;
@@ -44,6 +48,7 @@ return result;
 	///		vod
 	///		vnit
 	///		eg
+	///			when this is used in namespace, this would be "eg_", to express the following types are all unision 
 	/// 
 	public interface IUnison { }
 }

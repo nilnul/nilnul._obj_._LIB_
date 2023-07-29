@@ -1,5 +1,13 @@
 ﻿namespace nilnul.obj.vow
 {
+	/// <summary>
+	/// 
+	/// </summary>
+	/// 
+	/// <typeparam name="T"></typeparam>
+	/// alias:
+	///		ee
+	///		en
 	public interface Ee_ofInI<T>
 	{
 		ref T eeByRef

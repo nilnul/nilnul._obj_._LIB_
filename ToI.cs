@@ -8,8 +8,7 @@ namespace nilnul.obj
 {
 
 
-	//[Obsolete("wrong position of TDst")]
-	public interface ITo<in TSrc, out TDst>:ITo { }
+	
 	/// <summary>
 	/// 
 	/// </summary>
@@ -26,6 +25,7 @@ namespace nilnul.obj
 		TDst to(TSrc src);
 
 	}
+
 
 	[Obsolete("")]
 	public interface ToI<TTarget>:_to.SrcGenericI<object,TTarget>

@@ -6,27 +6,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.obj.op_.binary
+namespace nilnul.obj.of_.binary
 {
-	public interface CascaderI<out T, out TOp>
-		:
-		_cumulator_.BinderI<TOp>
-		where TOp : nilnul.obj.op_.BinaryI<T>
-	{
-	}
 	public interface CascaderI< T>
-		 : CascaderI<T, nilnul.obj.op_.BinaryI<T>>
+		 : CascaderI<T, nilnul.obj.of_.BinaryI<T>>
 	{
 	}
 
 	public class Cascader<T, TOp>
 		:
-		nilnul.objs_.started.CascadeA<T>,
+		nilnul.obj.str_.started.CascadeA<T>
+		,
 		CascaderI<T, TOp>
 		,
-		nilnul.objs_.started.CascadeI<T>
+		nilnul.obj.str_.started.CascadeI<T>
 
-		where TOp : nilnul.obj.op_.BinaryI<T>
+		where TOp : nilnul.obj.of_.BinaryI<T>
 	{
 		
 		private TOp _binder;
@@ -35,17 +30,19 @@ namespace nilnul.obj.op_.binary
 		{
 			_binder = binder;
 		}
-		
 
-
-
-		public override T cascade(Started3<T> started)
+		public override T cascade(T started, IEnumerator<T> seq)
 		{
-			return _cascader_._CascadeX.Cascade_ofStarted(
-				started
-				,binder
-			);
+			while (seq.MoveNext())
+			{
+				started = _binder.op(started, seq.Current);
+			}
+			return started;
+	
+		
 		}
+
+
 		//public T cascade(IEnumerable<T> seq)
 		//{
 		//	return cascade(new Started3<T>( seq ));
@@ -58,12 +55,12 @@ namespace nilnul.obj.op_.binary
 
 	public class Cascader<T>
 		:
-		Cascader<T, nilnul.obj.op_.BinaryI<T>>
+		Cascader<T, nilnul.obj.of_.BinaryI<T>>
 		,
 		CascaderI<T>
 	{
 
-		public Cascader( nilnul.obj.op_.BinaryI<T> accumulator) : base( accumulator)
+		public Cascader( nilnul.obj.of_.BinaryI<T> accumulator) : base( accumulator)
 		{
 
 		}

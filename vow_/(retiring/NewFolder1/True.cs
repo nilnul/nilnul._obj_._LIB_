@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.vow_
 {
+	[Obsolete(nameof(nilnul.bit.vow_.True))]
 	public class True : 
 		
 		VowI<bool>

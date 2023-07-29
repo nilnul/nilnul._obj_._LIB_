@@ -4,24 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace nilnul.obj.op_.binary.cascader_
+namespace nilnul.obj.of_.binary.cascader_
 {
 	public class OpDefault<T, TOp>
 		: Cascader<T, TOp>
-		where TOp : nilnul.obj.op_.BinaryI<T>, new()
+		where TOp : nilnul.obj.of_.BinaryI<T>, new()
 	{
-		public OpDefault() : base(nilnul.obj_.Singleton<TOp>.Instance)
+		public OpDefault() : base(
+				 nilnul._obj.typ_._UnisonX<TOp>.Unison
+		)
 		{
 		}
 
 
-		static public OpDefault<T, TOp> Singleton
+
+		static public OpDefault<T, TOp> Unison
 		{
 			get
 			{
-				return nilnul.obj_.Singleton<OpDefault<T, TOp>>.Instance;
+				return nilnul._obj.typ_._UnisonX<OpDefault<T, TOp>>.Unison;
 			}
 		}
+
 
 	}
 }

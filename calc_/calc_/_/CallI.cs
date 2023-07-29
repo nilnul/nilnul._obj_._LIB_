@@ -5,10 +5,17 @@ using System.Text;
 
 namespace nilnul.obj
 {
-	[Obsolete(nameof(nilnul.obj.op))]
+	/// <summary>
+	/// apply <see cref="obj.op"/> on something.
+	/// </summary>
+	/// <see cref="nilnul.obj.ICalc"/>
+	[Obsolete(nameof(nilnul.obj.ICalc))]
 	public interface ICall { }
 	/// <summary>
 	/// </summary>
+	///
+
+	[Obsolete(nameof(nilnul.obj.ICalc))]
 	public  interface CallI:ICall
 	{
 

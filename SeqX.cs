@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj
 {
+
 	/*
 	 if it's finite, we call it Repeated;
 	if it's infinite, we call it Recured.

@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace nilnul.obj.re
 {
+
+
 	[Obsolete()]
 	public class Converse<T, TRe> : Converse<T>
 		where TRe : nilnul.obj.ReI<T>, new()
+
 	{
 		public Converse() : base(nilnul.obj.SingletonByLazy<TRe>.Lazy)
 		{
